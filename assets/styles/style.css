@@ -1,7 +1,9 @@
 body {
   font-family: Georgia, "Times New Roman", Times, serif;
-  margin: 0 auto;
   text-align: center;
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
 .animation-section {
@@ -39,19 +41,12 @@ body {
   animation: moving-clouds 20s infinite linear;
 }
 
-body, html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-}
-
 .container {
   height: 2000px; /* Make the page scrollable */
 }
 
 .section {
   height: 500px;
-  background-color: red;
   margin: 20px 0;
   opacity: 0; /* Initially hide sections */
   transition: opacity 2.5s ease; /* Smooth transition for opacity */
