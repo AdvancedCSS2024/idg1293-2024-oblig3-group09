@@ -1,35 +1,17 @@
-const sections = document.querySelectorAll('.section');
+const sectionEls = document.querySelectorAll("[data-hidden]");
 
-function revealSections() {
-  let visibleSection = null;
-  let minDistance = Number.MAX_VALUE;
+const options = {
+	rootMargin: "-50%",
+};
 
-  sections.forEach(section => {
-    const sectionTop = section.getBoundingClientRect().top;
-    const windowHeight = window.innerHeight;
-    const triggerPoint = 100; // Adjust this value as needed
+const observer = new IntersectionObserver(entries=>{
+	entries.forEach(entry=>{
+		if(entry.isIntersecting){
+			entry.target.classList.remove(entry.target.dataset.hidden);
+		}else{
+			entry.target.classList.add(entry.target.dataset.hidden);
+		}
+	});
+}, options);
 
-    // If the top of the section is within the viewport
-    if (sectionTop < windowHeight - triggerPoint && sectionTop > -section.offsetHeight) {
-      const distance = Math.abs(sectionTop);
-      if (distance < minDistance) {
-        minDistance = distance;
-        visibleSection = section;
-      }
-    }
-  });
-
-  sections.forEach(section => {
-    if (section === visibleSection) {
-      section.classList.add('animated');
-    } else {
-      section.classList.remove('animated');
-    }
-  });
-}
-
-// Initial call to reveal sections that are already visible on page load
-revealSections();
-
-// Event listener for scroll
-window.addEventListener('scroll', revealSections);
+sectionEls.forEach(el=>observer.observe(el));

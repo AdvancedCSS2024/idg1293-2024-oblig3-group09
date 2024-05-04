@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Advanced CSS (Oblig 3) - Clean waters</title>
     <link rel="stylesheet" href="assets/styles/style.css">
+    <script defer src="/assets/scripts/script.js"></script>
 </head>
 <body>
     <header>
@@ -14,7 +15,25 @@
     </header>
     <main>
         <h2>Earth's clear Oceans</h2>
-        <section class="animation-section">
+        <section data-hidden="hidden-opacity" class="hidden-opacity">
+            <svg class="ocean-window" width="800" height="350" fill="lightblue" xmlns="http://www.w3.org/2000/svg">
+                <rect class="background-sky" width="802" height="352"></rect>
+                <circle r="45" cx="600" cy="50" fill="orange" />
+                
+
+                <ellipse class="cloud cloud-1" rx="60" ry="30" cx="400" cy="50" fill="white" />
+                <rect class="ocean" width="802" height="152" y="200" fill="blue"></rect>
+            </svg>
+        </section>
+        <section data-hidden="hidden-opacity" class="hidden-opacity">
+            <svg class="ocean-window" width="800" height="350" fill="lightblue" xmlns="http://www.w3.org/2000/svg">
+                <rect class="background-sky" width="802" height="352"></rect>
+                <circle r="45" cx="600" cy="50" fill="orange" />
+                <ellipse class="cloud cloud-1" rx="60" ry="30" cx="400" cy="50" fill="white" />
+                <rect class="ocean" width="802" height="152" y="200" fill="blue"></rect>
+            </svg>
+        </section>
+        <section data-hidden="hidden-opacity" class="hidden-opacity">
             <svg class="ocean-window" width="800" height="350" fill="lightblue" xmlns="http://www.w3.org/2000/svg">
                 <rect class="background-sky" width="802" height="352"></rect>
                 <circle r="45" cx="600" cy="50" fill="orange" />
@@ -23,5 +42,6 @@
             </svg>
         </section>
     </main>
+    
 </body>
 </html>
