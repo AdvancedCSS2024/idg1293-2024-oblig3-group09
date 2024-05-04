@@ -85,6 +85,72 @@ body {
     visibility: hidden;
   }
 }
+@keyframes largenetUpDown {
+  0% {
+    transform: translateY(140px);
+  }
+  50% {
+    transform: translateY(130px);
+  }
+  100% {
+    transform: translateY(140px);
+  }
+}
+@keyframes bottleUpDown1 {
+  0% {
+    transform: translateY(140px) rotate(45deg);
+  }
+  50% {
+    transform: translateY(130px) rotate(45deg);
+  }
+  100% {
+    transform: translateY(140px) rotate(45deg);
+  }
+}
+@keyframes bottleUpDown2 {
+  0% {
+    transform: translateY(140px) translateX(100px) rotate(-45deg);
+  }
+  50% {
+    transform: translateY(130px) translatex(100px) rotate(-45deg);
+  }
+  100% {
+    transform: translateY(140px) translatex(100px) rotate(-45deg);
+  }
+}
+@keyframes bottleUpDown3 {
+  0% {
+    transform: translateY(140px) translateX(-50px) rotate(-45deg);
+  }
+  50% {
+    transform: translateY(130px) translatex(-50px) rotate(-45deg);
+  }
+  100% {
+    transform: translateY(140px) translatex(-50px) rotate(-45deg);
+  }
+}
+@keyframes bottleUpDown4 {
+  0% {
+    transform: translateY(100px) translateX(50px) rotate(-45deg);
+  }
+  50% {
+    transform: translateY(90px) translatex(50px) rotate(-45deg);
+  }
+  100% {
+    transform: translateY(100px) translatex(50px) rotate(-45deg);
+  }
+}
+@keyframes bottleUpDown5 {
+  0% {
+    transform: translateY(100px) translateX(-40px) rotate(45deg);
+  }
+  50% {
+    transform: translateY(90px) translatex(-40px) rotate(45deg);
+  }
+  100% {
+    transform: translateY(100px) translatex(-40px) rotate(45deg);
+  }
+}
 @keyframes boating {
   0% {
     transform: translate(20vw, 12vh) rotate(4deg);
@@ -240,6 +306,29 @@ body {
 .story__scene #motorboat_2 {
   animation: boating-still 20s infinite linear;
   animation-delay: 12.5s;
+}
+.story__scene .large_net {
+  max-width: 330px;
+  animation: largenetUpDown 5s linear infinite;
+  z-index: 1;
+}
+.story__scene .empty_bottle_colored {
+  max-width: 10px;
+}
+.story__scene #bottle_1 {
+  animation: bottleUpDown1 5s linear infinite;
+}
+.story__scene #bottle_2 {
+  animation: bottleUpDown2 5s linear infinite;
+}
+.story__scene #bottle_3 {
+  animation: bottleUpDown3 5s linear infinite;
+}
+.story__scene #bottle_4 {
+  animation: bottleUpDown4 5s linear infinite;
+}
+.story__scene #bottle_5 {
+  animation: bottleUpDown5 5s linear infinite;
 }
 
 .ocean-window {
