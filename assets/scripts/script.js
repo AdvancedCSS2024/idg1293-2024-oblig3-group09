@@ -6,9 +6,9 @@ const options = {
 
 const observer = new IntersectionObserver(entries=>{
 	entries.forEach(entry=>{
-		if(entry.isIntersecting){
+		if(entry.isIntersecting) {
 			entry.target.classList.remove(entry.target.dataset.hidden);
-		}else{
+		} else {
 			entry.target.classList.add(entry.target.dataset.hidden);
 		}
 	});
