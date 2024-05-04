@@ -1,20 +1,18 @@
 body {
   font-family: Georgia, "Times New Roman", Times, serif;
+  margin: 0 auto;
   text-align: center;
   margin: 0;
   padding: 0;
   height: 100%;
+  background-color: var(--bg-color);
+  color: rgb(68, 67, 67);
+  font-size: 20px;
 }
 
-.animation-section {
-  display: flex;
-  justify-content: center;
-}
-
-.ocean-window {
-  margin: 0 auto;
-  max-width: 1800px;
-  width: 50%;
+:root {
+  --bg-color: antiquewhite;
+  --bg-section-color: antiquewhite;
 }
 
 @keyframes moving-clouds {
@@ -37,36 +35,134 @@ body {
     transform: translateX(120%);
   }
 }
-.cloud-1 {
-  animation: moving-clouds 20s infinite linear;
+@keyframes fish-jump {
+  0% {
+    transform: scalex(-1) translate(0, 14vh) rotate(45deg);
+  }
+  10% {
+    transform: scalex(-1) translate(-10%, 8vh) rotate(30deg);
+  }
+  20% {
+    transform: scalex(-1) translate(-20%, 2vh) rotate(15deg);
+  }
+  30% {
+    transform: scalex(-1) translate(-30%, -5vh) rotate(0deg);
+  }
+  40% {
+    transform: scalex(-1) translate(-40%, 2vh) rotate(-15deg);
+  }
+  50% {
+    transform: scalex(-1) translate(-50%, 8vh) rotate(-30deg);
+  }
+  60% {
+    transform: scalex(-1) translate(-55%, 14vh) rotate(-45deg);
+    visibility: hidden;
+  }
+  100% {
+    transform: scalex(-1) translate(0, 22vh) rotate(45deg);
+    visibility: hidden;
+  }
 }
-
-body {
-  background-color: var(--bg-color);
-  color: rgb(68, 67, 67);
-  font-size: 20px;
+@keyframes fish-peek {
+  0% {
+    transform: scalex(-1) translate(0, 24vh) rotate(30deg);
+    z-index: -9;
+  }
+  20% {
+    transform: scalex(-1) translate(0, 22vh) rotate(30deg);
+    z-index: -9;
+  }
+  40% {
+    transform: scalex(-1) translate(0, 20vh) rotate(30deg);
+    z-index: -9;
+  }
+  60% {
+    transform: scalex(-1) translate(0, 22vh) rotate(30deg);
+    z-index: -9;
+  }
+  80% {
+    transform: scalex(-1) translate(0, 24vh) rotate(30deg);
+    z-index: -9;
+  }
+  100% {
+    transform: scalex(-1) translate(0, 20vh) rotate(30deg);
+    z-index: -9;
+    visibility: hidden;
+  }
 }
-
-section {
-  min-height: 70vh;
-  padding: auto;
-  background-color: var(--bg-section-color);
+.story__scene {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: justify;
-  transition: all 2s;
-  gap: 1vmin;
+  min-height: 200px;
+  background-color: var(--bg-section-color);
+  transition: all 5s;
+  margin: 0 20vw;
+  padding: 5vw;
+}
+.story__scene .fish {
+  margin: 0 auto;
+  display: inline-block;
+  position: absolute;
+  transform: scalex(-1);
+  max-width: 300px;
+  width: 10vw;
+  z-index: -7;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .story__scene #fish_1 {
+    animation: fish-jump 5s infinite linear;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .story__scene #fish_1 {
+    animation: fish-peek 12s infinite linear;
+  }
+}
+.story__scene .cloud-1 {
+  transform: translateX(-80%);
+  animation: moving-clouds 20s infinite linear;
+}
+
+.ocean-window {
+  margin: 0 auto;
+  max-width: 1800px;
+  width: 50vw;
+  z-index: -100;
+}
+
+.background-sky {
+  z-index: -20;
+}
+
+.ocean {
+  z-index: -8;
 }
 
 .hidden-opacity {
   opacity: 0;
 }
 
+.hidden-translate {
+  transform: translateX(-50%);
+}
+
+.hidden-color {
+  filter: brightness(0);
+}
+
+.hidden-blur {
+  filter: blur(15px);
+}
+
+.hidden-font {
+  font-size: 0px;
+}
 
 .hidden-all {
   opacity: 0;
   filter: blur(15px);
-  transform: translateX(-100%);
+  transform: translateX(-50%);
 }/*# sourceMappingURL=style.css.map */
