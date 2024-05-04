@@ -76,6 +76,45 @@ body {
 		visibility: hidden;
 	}
 }
+
+@keyframes largenetUpDown {
+    0% { transform: translateY(140px); }
+    50% { transform: translateY(130px); }
+    100% { transform: translateY(140px); }
+}
+
+@keyframes bottleUpDown1 {
+	0% { transform: translateY(140px) rotate(45deg); }
+    50% { transform: translateY(130px) rotate(45deg); }
+    100% { transform: translateY(140px) rotate(45deg); }
+}
+
+@keyframes bottleUpDown2 {
+	0% { transform: translateY(140px) translateX(100px) rotate(-45deg); }
+    50% { transform: translateY(130px)translatex(100px) rotate(-45deg); }
+    100% { transform: translateY(140px) translatex(100px) rotate(-45deg); }
+}
+
+@keyframes bottleUpDown3 {
+	0% { transform: translateY(140px) translateX(-50px) rotate(-45deg); }
+    50% { transform: translateY(130px)translatex(-50px) rotate(-45deg); }
+    100% { transform: translateY(140px) translatex(-50px) rotate(-45deg); }
+}
+
+@keyframes bottleUpDown4 {
+	0% { transform: translateY(100px) translateX(50px) rotate(-45deg); }
+    50% { transform: translateY(90px)translatex(50px) rotate(-45deg); }
+    100% { transform: translateY(100px) translatex(50px) rotate(-45deg); }
+}
+@keyframes bottleUpDown5 {
+	0% { transform: translateY(100px) translateX(-40px) rotate(45deg); }
+    50% { transform: translateY(90px)translatex(-40px) rotate(45deg); }
+    100% { transform: translateY(100px) translatex(-40px) rotate(45deg); }
+}
+
+
+
+
   
 .story {
 	&__scene {
@@ -98,6 +137,35 @@ body {
 			max-width: 300px;
 			width: 10vw;
 			z-index: -7;
+		}
+
+		.large_net {
+			position: absolute;
+			max-width: 330px;
+			animation: largenetUpDown 5s linear infinite;
+			z-index: 1;
+		}
+
+		.empty_bottle_colored {
+			max-width: 10px;
+			position: absolute;
+		}
+
+		#bottle_1 {
+			animation: bottleUpDown1 5s linear infinite;
+		}
+
+		#bottle_2 {
+			animation: bottleUpDown2 5s linear infinite;
+		}
+		#bottle_3 {
+			animation: bottleUpDown3 5s linear infinite;
+		}
+		#bottle_4 {
+			animation: bottleUpDown4 5s linear infinite;
+		}
+		#bottle_5 {
+			animation: bottleUpDown5 5s linear infinite;
 		}
 	
 		@media (prefers-reduced-motion: no-preference) {
