@@ -5,7 +5,7 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
-  background-color: var(--bg-color);
+  background-color: antiquewhite;
   color: rgb(68, 67, 67);
   font-size: 20px;
 }
@@ -151,6 +151,111 @@ body {
     transform: translateY(100px) translatex(-40px) rotate(45deg);
   }
 }
+@keyframes boating {
+  0% {
+    transform: translate(20vw, 12vh) rotate(4deg);
+    z-index: -9;
+  }
+  10% {
+    transform: translate(10vw, 12vh) rotate(0deg);
+    z-index: -9;
+  }
+  20% {
+    transform: translate(0vw, 12vh) rotate(-4deg);
+    z-index: -9;
+  }
+  30% {
+    transform: translate(-4vw, 12vh) rotate(0deg);
+    z-index: -9;
+  }
+  40% {
+    transform: translate(-10vw, 13vh) rotate(4deg);
+    z-index: -9;
+  }
+  50% {
+    transform: translate(-10vw, 14vh) rotate(0deg);
+    z-index: -9;
+  }
+  60% {
+    transform: translate(-10vw, 14vh) rotate(-4deg);
+    z-index: -9;
+  }
+  70% {
+    transform: translate(-10vw, 14vh) rotate(0deg);
+    z-index: -9;
+  }
+  80% {
+    transform: translate(-10vw, 14vh) rotate(4deg);
+    z-index: -9;
+  }
+  90% {
+    transform: translate(-10vw, 14vh) rotate(0deg);
+    z-index: -9;
+    overflow: hidden;
+  }
+  100% {
+    transform: translate(-10vw, 14vh) rotate(-3deg);
+    z-index: -9;
+    overflow: hidden;
+  }
+}
+@keyframes boating-still {
+  0% {
+    transform: translate(-10vw, 14vh) rotate(-3deg);
+    z-index: -9;
+    overflow: hidden;
+  }
+  10% {
+    transform: translate(-10vw, 14vh) rotate(3deg);
+    z-index: -9;
+    overflow: hidden;
+  }
+  20% {
+    transform: translate(-10vw, 14vh) rotate(-3deg);
+    z-index: -9;
+    overflow: hidden;
+  }
+  30% {
+    transform: translate(-10vw, 14vh) rotate(3deg);
+    z-index: -9;
+    overflow: hidden;
+  }
+  40% {
+    transform: translate(-10vw, 14vh) rotate(-3deg);
+    z-index: -9;
+    overflow: hidden;
+  }
+  50% {
+    transform: translate(-10vw, 14vh) rotate(3deg);
+    z-index: -9;
+    overflow: hidden;
+  }
+  60% {
+    transform: translate(-10vw, 14vh) rotate(-3deg);
+    z-index: -9;
+    overflow: hidden;
+  }
+  70% {
+    transform: translate(-10vw, 14vh) rotate(3deg);
+    z-index: -9;
+    overflow: hidden;
+  }
+  80% {
+    transform: translate(-10vw, 14vh) rotate(-3deg);
+    z-index: -9;
+    overflow: hidden;
+  }
+  90% {
+    transform: translate(-10vw, 14vh) rotate(3deg);
+    z-index: -9;
+    overflow: hidden;
+  }
+  100% {
+    transform: translate(-10vw, 14vh) rotate(-3deg);
+    z-index: -9;
+    overflow: hidden;
+  }
+}
 .story__scene {
   display: flex;
   flex-direction: column;
@@ -158,29 +263,57 @@ body {
   align-items: center;
   text-align: justify;
   min-height: 200px;
-  background-color: var(--bg-section-color);
   transition: all 5s;
   margin: 0 20vw;
   padding: 5vw;
 }
-.story__scene .fish {
+.story__scene .vector-illustration {
   margin: 0 auto;
   display: inline-block;
   position: absolute;
+}
+.story__scene .fish {
   transform: scalex(-1);
   max-width: 300px;
   width: 10vw;
   z-index: -7;
 }
+.story__scene .motorboat {
+  overflow: hidden;
+  max-width: 450px;
+  width: 15vw;
+  transform: translateX(110vw);
+  z-index: -7;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .story__scene #fish_1 {
+    animation: fish-jump 5s infinite linear;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .story__scene #fish_1 {
+    animation: fish-peek 12s infinite linear;
+  }
+}
+.story__scene .cloud-1 {
+  transform: translateX(-80%);
+  animation: moving-clouds 30s infinite linear;
+}
+.story__scene #motorboat_1 {
+  animation: boating 10s 1 linear;
+  animation-delay: 2.5s;
+}
+.story__scene #motorboat_2 {
+  animation: boating-still 20s infinite linear;
+  animation-delay: 12.5s;
+}
 .story__scene .large_net {
-  position: absolute;
   max-width: 330px;
   animation: largenetUpDown 5s linear infinite;
   z-index: 1;
 }
 .story__scene .empty_bottle_colored {
   max-width: 10px;
-  position: absolute;
 }
 .story__scene #bottle_1 {
   animation: bottleUpDown1 5s linear infinite;
@@ -196,20 +329,6 @@ body {
 }
 .story__scene #bottle_5 {
   animation: bottleUpDown5 5s linear infinite;
-}
-@media (prefers-reduced-motion: no-preference) {
-  .story__scene #fish_1 {
-    animation: fish-jump 5s infinite linear;
-  }
-}
-@media (prefers-reduced-motion: reduce) {
-  .story__scene #fish_1 {
-    animation: fish-peek 12s infinite linear;
-  }
-}
-.story__scene .cloud-1 {
-  transform: translateX(-80%);
-  animation: moving-clouds 20s infinite linear;
 }
 
 .ocean-window {
