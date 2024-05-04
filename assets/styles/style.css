@@ -10,11 +10,6 @@ body {
   font-size: 20px;
 }
 
-:root {
-  --bg-color: antiquewhite;
-  --bg-section-color: antiquewhite;
-}
-
 @keyframes moving-clouds {
   0% {
     transform: translateX(-80%);
