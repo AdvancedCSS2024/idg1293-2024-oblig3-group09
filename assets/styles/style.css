@@ -392,6 +392,20 @@ body {
     overflow: hidden;
   }
 }
+@keyframes bottleDrifting {
+  0% {
+    transform: translateY(10vw) rotate(45deg);
+    z-index: -5;
+  }
+  50% {
+    transform: translateY(11vw) rotate(45deg);
+    z-index: -5;
+  }
+  100% {
+    transform: translateY(10vw) rotate(45deg);
+    z-index: -5;
+  }
+}
 .story__scene {
   display: flex;
   flex-direction: column;
@@ -467,6 +481,10 @@ body {
 .story__scene .empty_bottle_colored {
   max-width: 10px;
 }
+.story__scene #bottle_initial {
+  animation: bottleDrifting 6s linear infinite;
+  z-index: -5;
+}
 .story__scene #bottle_1 {
   animation: bottleUpDown1 6s linear infinite;
 }
@@ -510,6 +528,9 @@ body {
   max-width: 1800px;
   width: 50vw;
   z-index: -100;
+}
+.ocean-window .ocean-water {
+  z-index: 75;
 }
 
 .background-sky {
