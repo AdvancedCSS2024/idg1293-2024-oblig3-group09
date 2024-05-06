@@ -151,6 +151,50 @@ body {
     transform: translateY(100px) translatex(-40px) rotate(45deg);
   }
 }
+@keyframes greybottleUpDown1 {
+  0% {
+    transform: translateY(160px) translatex(70px) rotate(45deg);
+  }
+  50% {
+    transform: translateY(150px) translatex(70px) rotate(45deg);
+  }
+  100% {
+    transform: translateY(160px) translatex(70px) rotate(45deg);
+  }
+}
+@keyframes greybottleUpDown2 {
+  0% {
+    transform: translateY(100px) translateX(-90px) rotate(-45deg);
+  }
+  50% {
+    transform: translateY(90px) translatex(-90px) rotate(-45deg);
+  }
+  100% {
+    transform: translateY(100px) translatex(-90px) rotate(-45deg);
+  }
+}
+@keyframes greybottleUpDown3 {
+  0% {
+    transform: translateY(170px) translateX(-60px) rotate(-45deg);
+  }
+  50% {
+    transform: translateY(160px) translatex(-60px) rotate(-45deg);
+  }
+  100% {
+    transform: translateY(170px) translatex(-60px) rotate(-45deg);
+  }
+}
+@keyframes small_net1 {
+  0% {
+    transform: translateY(140px) translateX(-60px) rotate(-45deg);
+  }
+  50% {
+    transform: translateY(130px) translatex(-60px) rotate(-45deg);
+  }
+  100% {
+    transform: translateY(140px) translatex(-60px) rotate(-45deg);
+  }
+}
 @keyframes boating {
   0% {
     overflow: hidden;
@@ -424,19 +468,41 @@ body {
   max-width: 10px;
 }
 .story__scene #bottle_1 {
-  animation: bottleUpDown1 5s linear infinite;
+  animation: bottleUpDown1 6s linear infinite;
 }
 .story__scene #bottle_2 {
-  animation: bottleUpDown2 5s linear infinite;
+  animation: bottleUpDown2 8s linear infinite;
 }
 .story__scene #bottle_3 {
-  animation: bottleUpDown3 5s linear infinite;
+  animation: bottleUpDown3 7s linear infinite;
 }
 .story__scene #bottle_4 {
-  animation: bottleUpDown4 5s linear infinite;
+  animation: bottleUpDown4 6s linear infinite;
 }
 .story__scene #bottle_5 {
   animation: bottleUpDown5 5s linear infinite;
+}
+.story__scene .grey_bottle {
+  max-width: 10px;
+}
+.story__scene #grey_bottle_1 {
+  animation: greybottleUpDown1 8s linear infinite;
+}
+.story__scene #grey_bottle_2 {
+  animation: greybottleUpDown2 6s linear infinite;
+}
+.story__scene #grey_bottle_3 {
+  animation: greybottleUpDown3 7s linear infinite;
+}
+.story__scene .small_net {
+  max-width: 130px;
+}
+.story__scene #small_net_1 {
+  animation: small_net1 9s linear infinite;
+}
+
+#scene_6 .ocean-window {
+  color: bisque;
 }
 
 .ocean-window {
