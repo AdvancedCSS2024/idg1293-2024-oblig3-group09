@@ -537,18 +537,52 @@ $algaeGreen: rgb(19, 75, 28);
 
 @keyframes bottleDrifting {
 	0% {
-		transform: translateY(10vw) rotate(45deg);
+		transform: translateY(8vw) rotate(45deg);
 		z-index: -5;
 	}
     50% {
-		transform: translateY(11vw) rotate(45deg);
+		transform: translateY(8.5vw) rotate(50deg);
 		z-index: -5;
 	}
     100% {
-		transform: translateY(10vw) rotate(45deg);
+		transform: translateY(8vw) rotate(45deg);
 		z-index: -5;
 	}
 }
+
+@keyframes plasticDrifting {
+
+	
+	0% {
+		transform: translateY(8.5vw) translateX(110px)  rotate(65deg);
+		z-index: -5;
+	}
+    50% {
+		transform: translateY(9vw) translateX(110px)  rotate(55deg);
+		z-index: -5;
+	}
+    100% {
+		transform: translateY(8.5vw) translateX(110px)  rotate(65deg);
+		z-index: -5;
+	}
+}
+
+@keyframes beerboxDrifting {
+
+	0% {
+		transform: translateY(6vw) translateX(-130px)  rotate(15deg);
+		z-index: -5;
+	}
+    50% {
+		transform: translateY(6.5vw) translateX(-130px)  rotate(20deg);
+		z-index: -5;
+	}
+    100% {
+		transform: translateY(6vw) translateX(-130px)  rotate(15deg);
+		z-index: -5;
+	}
+}
+
 
 .story {
 	&__scene {
@@ -671,6 +705,33 @@ $algaeGreen: rgb(19, 75, 28);
 				visibility: visible;
 			}
 		}
+
+		.ocean_water {
+			overflow: hidden;
+			max-width: 1350px;
+			width: 45vw;
+			z-index: 8;
+			fill: blue;
+			transform: translateY(11vw);
+			animation: oceanMove 6s linear infinite;
+		}
+	
+
+
+		@keyframes oceanMove {
+			0% {
+				transform: translateY(11vw) rotate(6deg);
+				z-index: -5;
+			}
+			50% {
+				transform: translateY(11.5vw) rotate(-6deg);
+				z-index: -5;
+			}
+			100% {
+				transform: translateY(11vw) rotate(6deg);
+				z-index: -5;
+			}
+		}
 	
 		@media (prefers-reduced-motion: no-preference) {
 			#fish_1 {
@@ -751,7 +812,18 @@ $algaeGreen: rgb(19, 75, 28);
 		}
 
 		.empty_bottle_colored {
-			max-width: 10px;
+			max-width: 30px;
+			width: 1vw;
+		}
+
+		.waste_plastic {
+			max-width: 75px;
+			width: 2.5vw;
+		}
+
+		.waste_beer_box {
+			max-width: 90px;
+			width: 3vw;
 		}
 
 		#bottle_initial {
@@ -816,7 +888,16 @@ $algaeGreen: rgb(19, 75, 28);
 			width: 1vw;
 			animation: dirtybottle1 7s linear infinite;
 		}
-	}
+
+		#waste_plastic {
+			animation: plasticDrifting 7s linear infinite;
+			z-index: -5;
+		}
+
+		#waste_beer_box {
+			animation: beerboxDrifting 4s linear infinite;
+			z-index: -5;
+		}
 }
 
 #scene_6 {

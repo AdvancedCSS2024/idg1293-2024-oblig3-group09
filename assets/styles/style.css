@@ -614,15 +614,43 @@ body {
 }
 @keyframes bottleDrifting {
   0% {
-    transform: translateY(10vw) rotate(45deg);
+    transform: translateY(8vw) rotate(45deg);
     z-index: -5;
   }
   50% {
-    transform: translateY(11vw) rotate(45deg);
+    transform: translateY(8.5vw) rotate(50deg);
     z-index: -5;
   }
   100% {
-    transform: translateY(10vw) rotate(45deg);
+    transform: translateY(8vw) rotate(45deg);
+    z-index: -5;
+  }
+}
+@keyframes plasticDrifting {
+  0% {
+    transform: translateY(8.5vw) translateX(110px) rotate(65deg);
+    z-index: -5;
+  }
+  50% {
+    transform: translateY(9vw) translateX(110px) rotate(55deg);
+    z-index: -5;
+  }
+  100% {
+    transform: translateY(8.5vw) translateX(110px) rotate(65deg);
+    z-index: -5;
+  }
+}
+@keyframes beerboxDrifting {
+  0% {
+    transform: translateY(6vw) translateX(-130px) rotate(15deg);
+    z-index: -5;
+  }
+  50% {
+    transform: translateY(6.5vw) translateX(-130px) rotate(20deg);
+    z-index: -5;
+  }
+  100% {
+    transform: translateY(6vw) translateX(-130px) rotate(15deg);
     z-index: -5;
   }
 }
@@ -723,6 +751,29 @@ body {
   animation: largenetUpDown 5s linear infinite;
   visibility: visible;
 }
+.story__scene .ocean_water {
+  overflow: hidden;
+  max-width: 1350px;
+  width: 45vw;
+  z-index: 8;
+  fill: blue;
+  transform: translateY(11vw);
+  animation: oceanMove 6s linear infinite;
+}
+@keyframes oceanMove {
+  0% {
+    transform: translateY(11vw) rotate(6deg);
+    z-index: -5;
+  }
+  50% {
+    transform: translateY(11.5vw) rotate(-6deg);
+    z-index: -5;
+  }
+  100% {
+    transform: translateY(11vw) rotate(6deg);
+    z-index: -5;
+  }
+}
 @media (prefers-reduced-motion: no-preference) {
   .story__scene #fish_1 {
     animation: fish-jump 4s infinite linear;
@@ -785,7 +836,16 @@ body {
   animation-delay: 17.5s;
 }
 .story__scene .empty_bottle_colored {
-  max-width: 10px;
+  max-width: 30px;
+  width: 1vw;
+}
+.story__scene .waste_plastic {
+  max-width: 75px;
+  width: 2.5vw;
+}
+.story__scene .waste_beer_box {
+  max-width: 90px;
+  width: 3vw;
 }
 .story__scene #bottle_initial {
   animation: bottleDrifting 6s linear infinite;
@@ -847,6 +907,14 @@ body {
 .story__scene #dirty_bottle_2 {
   width: 1vw;
   animation: dirtybottle1 7s linear infinite;
+}
+.story__scene #waste_plastic {
+  animation: plasticDrifting 7s linear infinite;
+  z-index: -5;
+}
+.story__scene #waste_beer_box {
+  animation: beerboxDrifting 4s linear infinite;
+  z-index: -5;
 }
 
 #scene_6 .ocean-window {
