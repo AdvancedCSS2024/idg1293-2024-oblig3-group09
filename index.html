@@ -20,9 +20,13 @@
                 <rect class="ocean" width="90vw" height="32vw" fill="blue"></rect>
                 <rect class="background-sky" width="90vw" height="18vw"></rect>
                 <circle class="sun sun--1" r="3vw" cx="60vw" cy="3.5vw" fill="orange" />
-                <ellipse class="cloud cloud_1" rx="4vw" ry="2vw" cx="30vw" cy="4vw" fill="white" />
+                <ellipse class="cloud cloud--1" rx="4vw" ry="2vw" cx="30vw" cy="4vw" fill="white" />
             </svg>
             <img class="vector-illustration fish" id="fish_1" src="assets/graphics/images/fish_colored.svg" alt="A gray-ish fish">
+            <img class="vector-illustration splash splash--big"
+                src="assets/graphics/images/splash_big.svg" alt="A large splash">
+            <img class="vector-illustration splash splash--small"
+                src="assets/graphics/images/splash_small.svg" alt="A small splash">
         </section>
         <section data-hidden="hidden-opacity" class="hidden-opacity story__scene story__scene--ocean-used" id="scene_2">
             <h2>Earth's active Oceans</h2>
@@ -30,12 +34,16 @@
                 <rect class="ocean" width="90vw" height="32vw" fill="blue"></rect>
                 <rect class="background-sky" width="90vw" height="18vw"></rect>
                 <circle class="sun sun--2" r="3vw" cx="60vw" cy="5.5vw" fill="orange" />
-                <ellipse class="cloud cloud_1" rx="4vw" ry="2vw" cx="30vw" cy="4vw" fill="white" />
+                <ellipse class="cloud cloud--1" rx="4vw" ry="2vw" cx="30vw" cy="4vw" fill="white" />
             </svg>
-            <img class="vector-illustration delayed-animation motorboat motorboat_1" id="motorboat_1"
+            <img class="vector-illustration delayed-animation motorboat motorboat--moving" id="motorboat_1"
+                src="assets/graphics/images/boat_with_people_moving.svg" alt="A red motorboat with two people">
+            <img class="vector-illustration delayed-animation motorboat motorboat--still" id="motorboat_2"
                 src="assets/graphics/images/boat_with_people.svg" alt="A red motorboat with two people">
-            <img class="vector-illustration delayed-animation motorboat motorboat_2" id="motorboat_2"
-                src="assets/graphics/images/boat_with_people.svg" alt="A red motorboat with two people">
+            <img class="vector-illustration delayed-animation bottle_tossed bottle_tossed--aerial"
+                src="assets/graphics/images/bottle_in_hand.svg" alt="A plastic bottle, recently in hand">
+            <img class="vector-illustration delayed-animation bottle_tossed bottle_tossed--floating"
+                src="assets/graphics/images/bottle_in_hand.svg" alt="A plastic bottle, recently in hand">
         </section>
         <section data-hidden="hidden-opacity" class="hidden-opacity story__scene story__scene--ocean-littered" id="scene_3">
             <h2>Earth's changing Oceans</h2> <!--WORK FROM HERE-->
@@ -44,7 +52,8 @@
                 <rect class="ocean-water" width="80vw" height="96" y="256" fill="blue"></rect>
                 <rect class="background-sky" width="90vw" height="18vw"></rect>
                 <circle class="sun sun--3" r="3vw" cx="60vw" cy="7.5vw" fill="orange" />
-                <ellipse class="cloud cloud_1" rx="4vw" ry="2vw" cx="30vw" cy="4vw" fill="white" />
+                <ellipse class="cloud cloud--1" rx="4vw" ry="2vw" cx="30vw" cy="4vw" fill="white" />
+                <ellipse class="cloud cloud--2" rx="4vw" ry="2.2vw" cx="30vw" cy="5.5vw" fill="white" />
             </svg>
             <img class = "vector-illustration empty_bottle_colored" id="bottle_initial"
                 src="/assets/graphics/images/empty_bottle_colored.svg" alt="bottle">
@@ -55,7 +64,7 @@
                 <rect class="ocean" width="90vw" height="32vw" fill="blue"></rect>
                 <rect class="background-sky" width="90vw" height="18vw"></rect>
                 <circle class="sun sun--4" r="3vw" cx="60vw" cy="9.5vw" fill="orange" />
-                <ellipse class="cloud cloud_1" rx="4vw" ry="2vw" cx="30vw" cy="4vw" fill="white" />
+                <ellipse class="cloud cloud--1" rx="4vw" ry="2vw" cx="30vw" cy="4vw" fill="white" />
             </svg>
             <img class="vector-illustration delayed-animation fishing-boat fishing-boat_net" id="fishing-boat_net"
                 src="assets/graphics/images/fishing_boat_left.svg" alt="A fishing boat with net deployed.">
@@ -70,7 +79,7 @@
                 <rect class="ocean" width="90vw" height="32vw" fill="blue"></rect>
                 <rect class="background-sky" width="90vw" height="18vw"></rect>
                 <circle class="sun sun--5" r="3vw" cx="60vw" cy="11.5vw" fill="orange" />
-                <ellipse class="cloud cloud_1" rx="4vw" ry="2vw" cx="30vw" cy="4vw" fill="white" />
+                <ellipse class="cloud cloud--1" rx="4vw" ry="2vw" cx="30vw" cy="4vw" fill="white" />
             </svg>
             <img class = "vector-illustration large_net large_net--drifting"
                 src="/assets/graphics/images/net_large.svg" alt="large net">
@@ -96,7 +105,7 @@
                 </linearGradient>
                 <rect class="background-sky" width="90vw" height="18vw"></rect>
                 <circle class="sun sun--6" r="3vw" cx="60vw" cy="13.5vw" fill="orange" />
-                <ellipse class="cloud cloud_1" rx="4vw" ry="2vw" cx="30vw" cy="4vw" fill="white" />
+                <ellipse class="cloud cloud--1" rx="4vw" ry="2vw" cx="30vw" cy="4vw" fill="white" />
             </svg>
             <img class = "vector-illustration empty_bottle_colored" id="bottle_1"
                 src="/assets/graphics/images/empty_bottle_colored.svg" alt="bottle">
@@ -115,14 +124,14 @@
             <img class = "vector-illustration grey_bottle" id="grey_bottle_3"
                 src="/assets/graphics/images/empty_bottle.svg" alt="gray bottle">
             <img class = "vector-illustration small_net" id="small_net_1"
-                src="/assets/graphics/images/net_large.svg" alt="small_net">
-            <img class = "vector-illustration dirtywine" id="Dirty_wine_1"
+                src="/assets/graphics/images/net_large.svg" alt="large net">
+            <img class = "vector-illustration dirtywine" id="dirty_wine_1"
                 src="/assets/graphics/images/wine_bottle_dirty.svg" alt="wine">
-            <img class = "vector-illustration dirtywine" id="Dirty_wine_2"
+            <img class = "vector-illustration dirtywine" id="dirty_wine_2"
                 src="/assets/graphics/images/wine_bottle_dirty.svg" alt="wine">
-            <img class = "vector-illustration dirty_bottle" id="dirty_bottle"
+            <img class = "vector-illustration dirty_bottle" id="dirty_bottle_1"
                 src="/assets/graphics/images/bottle_dirty.svg" alt="bottle">
-            <img class = "vector-illustration dirty_bottle" id="dirty_bottle2"
+            <img class = "vector-illustration dirty_bottle" id="dirty_bottle_2"
                 src="/assets/graphics/images/bottle_dirty.svg" alt="bottle">
         </section>
     </main>
