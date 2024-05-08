@@ -686,6 +686,30 @@ body {
 .story__scene #small_net_1 {
   animation: small_net1 9s linear infinite;
 }
+.story__scene #Dirty_wine_1 {
+  width: 1vw;
+  animation: dirtywine1 7s linear infinite;
+}
+.story__scene #Dirty_wine_2 {
+  width: 1vw;
+  animation: dirtywine2 7s linear infinite;
+}
+.story__scene #Wine_1 {
+  width: 1vw;
+  animation: wine1 7s linear infinite;
+}
+.story__scene #Wine_2 {
+  width: 1vw;
+  animation: wine2 7s linear infinite;
+}
+.story__scene #dirty_bottle {
+  width: 1vw;
+  animation: wine2 7s linear infinite;
+}
+.story__scene #dirty_bottle2 {
+  width: 1vw;
+  animation: dirtybottle1 7s linear infinite;
+}
 
 #scene_6 .ocean-window {
   color: bisque;
