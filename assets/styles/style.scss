@@ -111,9 +111,9 @@ $algaeGreen: rgb(19, 75, 28);
 }
 
 @keyframes largenetUpDown {
-    0% { transform: translateY(140px); }
-    50% { transform: translateY(130px); }
-    100% { transform: translateY(140px); }
+    0% { transform: translateY(100px); }
+    50% { transform: translateY(90px); }
+    100% { transform: translateY(100px); }
 }
 
 @keyframes bottleUpDown1 {
@@ -168,6 +168,35 @@ $algaeGreen: rgb(19, 75, 28);
     100% { transform: translateY(140px) translatex(-60px) rotate(-45deg); }
 }
 
+@keyframes dirtywine1 {
+	0% { transform: translateY(140px) translateX(60px) rotate(-45deg); }
+    50% { transform: translateY(130px)translatex(60px) rotate(-45deg); }
+    100% { transform: translateY(140px) translatex(60px) rotate(-45deg); }
+}
+
+@keyframes dirtywine2 {
+	0% { transform: translateY(100px) translateX(-100px) rotate(45deg); }
+    50% { transform: translateY(90px)translatex(-100px) rotate(45deg); }
+    100% { transform: translateY(100px) translatex(-100px) rotate(45deg); }
+}
+
+@keyframes wine1 {
+	0% { transform: translateY(140px) translateX(-100px) rotate(45deg); }
+    50% { transform: translateY(130px)translatex(-100px) rotate(45deg); }
+    100% { transform: translateY(140px) translatex(-100px) rotate(45deg); }
+}
+
+@keyframes wine2 {
+	0% { transform: translateY(140px) translateX(130px) rotate(45deg); }
+    50% { transform: translateY(130px)translatex(130px) rotate(45deg); }
+    100% { transform: translateY(140px) translatex(130px) rotate(45deg); }
+}
+
+@keyframes dirtybottle1 {
+	0% { transform: translateY(80px) translateX(110px) rotate(-45deg); }
+    50% { transform: translateY(70px)translatex(110px) rotate(-45deg); }
+    100% { transform: translateY(80px) translatex(110px) rotate(-45deg); }
+}
 @keyframes boating {
 	0% {
 		overflow: hidden;
@@ -507,10 +536,11 @@ $algaeGreen: rgb(19, 75, 28);
 			max-width: 330px;
 			animation: largenetUpDown 5s linear infinite;
 			z-index: 1;
+			width: 27vw;
 		}
 
 		.empty_bottle_colored {
-			max-width: 10px;
+			width: 1vw;
 		}
 
 		#bottle_initial {
@@ -550,6 +580,30 @@ $algaeGreen: rgb(19, 75, 28);
 		}
 		#small_net_1 {
 			animation: small_net1 9s linear infinite;
+		}
+		#Dirty_wine_1 {
+			width: 1vw;
+			animation: dirtywine1 7s linear infinite;
+		}
+		#Dirty_wine_2 {
+			width: 1vw;
+			animation: dirtywine2 7s linear infinite;
+		}
+		#Wine_1 {
+			width: 1vw;
+			animation: wine1 7s linear infinite;
+		}
+		#Wine_2 {
+			width: 1vw;
+			animation: wine2 7s linear infinite;
+		}
+		#dirty_bottle {
+			width: 1vw;
+			animation: wine2 7s linear infinite;
+		}
+		#dirty_bottle2 {
+			width: 1vw;
+			animation: dirtybottle1 7s linear infinite;
 		}
 
 	}
