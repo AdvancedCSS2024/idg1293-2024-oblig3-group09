@@ -2,14 +2,47 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
     margin: 0 auto;
     text-align: center;
-    margin: 0;
-    padding: 0;
-    height: 100%;
 	background-color: antiquewhite;
 	color: rgb(68, 67, 67);
 	font-size: 20px;
 }
 
+// Colors
+$algaeGreen: rgb(19, 75, 28);
+
+@keyframes sunshine {
+	0% { filter: brightness(100%); }
+
+	25% {
+		filter: brightness(90%);
+	}
+
+	50% { filter: brightness(100%); }
+
+	75% {
+		filter: brightness(110%);
+	}
+
+	100% { filter: brightness(100%); }
+}
+
+@keyframes intense_sunshine {
+	0% { filter: brightness(100%); }
+
+	25% {
+		filter: brightness(90%);
+		transform: translate(-2.9vw, -0.25vw) scale(1.05);
+	}
+
+	50% { filter: brightness(100%); }
+
+	75% {
+		filter: brightness(110%);
+		transform: translate(-2.9vw, -0.25vw) scale(1.05);
+	}
+
+	100% { filter: brightness(100%); }
+}
 
 @keyframes moving-clouds {
 	0% {transform: translateX(-80%);}
@@ -138,59 +171,59 @@ body {
 @keyframes boating {
 	0% {
 		overflow: hidden;
-		transform: translate(20vw, 12vh) rotate(4deg);
+		transform: translate(36vw, 5vw) rotate(4deg);
 		visibility: visible;
 		z-index: -9;
 	}
 	10% {
 		overflow: hidden;
-		transform: translate(10vw, 12vh) rotate(0deg);
+		transform: translate(20vw, 3vw) rotate(0deg);
 		visibility: visible;
 		z-index: -9;
 	}
 	20% {
-		transform: translate(0vw, 12vh) rotate(-4deg);
+		transform: translate(0vw, 3vw) rotate(-4deg);
 		visibility: visible;
 		z-index: -9;
 	}
 	30% {
-		transform: translate(-4vw, 12vh) rotate(0deg);
+		transform: translate(-8vw, 4vw) rotate(0deg);
 		visibility: visible;
 		z-index: -9;
 	}
 	40% {
-		transform: translate(-10vw, 13vh) rotate(4deg);
+		transform: translate(-16vw, 5vw) rotate(4deg);
 		visibility: visible;
 		z-index: -9;
 	}
 	50% {
-		transform: translate(-10vw, 14vh) rotate(0deg);
+		transform: translate(-20vw, 5vw) rotate(0deg);
 		visibility: visible;
 		z-index: -9;
 	}
 	60% {
-		transform: translate(-10vw, 14vh) rotate(-4deg);
+		transform: translate(-24vw, 6vw) rotate(-4deg);
 		visibility: visible;
 		z-index: -9;
 	}
 	70% {
-		transform: translate(-10vw, 14vh) rotate(0deg);
+		transform: translate(-24vw, 6vw) rotate(0deg);
 		visibility: visible;
 		z-index: -9;
 	}
 	80% {
-		transform: translate(-10vw, 14vh) rotate(4deg);
+		transform: translate(-24vw, 6vw) rotate(4deg);
 		visibility: visible;
 		z-index: -9;
 	}
 	90% {
-		transform: translate(-10vw, 14vh) rotate(0deg);
+		transform: translate(-24vw, 6vw) rotate(0deg);
 		visibility: visible;
 		z-index: -9;
 		overflow: hidden;
 	}
 	100% {
-		transform: translate(-10vw, 14vh) rotate(-3deg);
+		transform: translate(-24vw, 6vw) rotate(-3deg);
 		visibility: visible;
 		z-index: -9;
 		overflow: hidden;
@@ -199,67 +232,67 @@ body {
 
 @keyframes boating-still {
 	0% {
-		transform: translate(-10vw, 14vh) rotate(-3deg);
+		transform: translate(-24vw, 6vw) rotate(-3deg);
 		visibility: visible;
 		z-index: -9;
 		overflow: hidden;
 	}
 	10% {
-		transform: translate(-10vw, 14vh) rotate(3deg);
+		transform: translate(-24vw, 6vw) rotate(3deg);
 		visibility: visible;
 		z-index: -9;
 		overflow: hidden;
 	}
 	20% {
-		transform: translate(-10vw, 14vh) rotate(-3deg);
+		transform: translate(-24vw, 6vw) rotate(-3deg);
 		visibility: visible;
 		z-index: -9;
 		overflow: hidden;
 	}
 	30% {
-		transform: translate(-10vw, 14vh) rotate(3deg);
+		transform: translate(-24vw, 6vw) rotate(3deg);
 		visibility: visible;
 		z-index: -9;
 		overflow: hidden;
 	}
 	40% {
-		transform: translate(-10vw, 14vh) rotate(-3deg);
+		transform: translate(-24vw, 6vw) rotate(-3deg);
 		visibility: visible;
 		z-index: -9;
 		overflow: hidden;
 	}
 	50% {
-		transform: translate(-10vw, 14vh) rotate(3deg);
+		transform: translate(-24vw, 6vw) rotate(3deg);
 		visibility: visible;
 		z-index: -9;
 		overflow: hidden;
 	}
 	60% {
-		transform: translate(-10vw, 14vh) rotate(-3deg);
+		transform: translate(-24vw, 6vw) rotate(-3deg);
 		visibility: visible;
 		z-index: -9;
 		overflow: hidden;
 	}
 	70% {
-		transform: translate(-10vw, 14vh) rotate(3deg);
+		transform: translate(-24vw, 6vw) rotate(3deg);
 		visibility: visible;
 		z-index: -9;
 		overflow: hidden;
 	}
 	80% {
-		transform: translate(-10vw, 14vh) rotate(-3deg);
+		transform: translate(-24vw, 6vw) rotate(-3deg);
 		visibility: visible;
 		z-index: -9;
 		overflow: hidden;
 	}
 	90% {
-		transform: translate(-10vw, 14vh) rotate(3deg);
+		transform: translate(-24vw, 6vw) rotate(3deg);
 		visibility: visible;
 		z-index: -9;
 		overflow: hidden;
 	}
 	100% {
-		transform: translate(-10vw, 14vh) rotate(-3deg);
+		transform: translate(-24vw, 6vw) rotate(-3deg);
 		visibility: visible;
 		z-index: -9;
 		overflow: hidden;
@@ -268,67 +301,67 @@ body {
 
 @keyframes fishing-still {
 	0% {
-		transform: translate(-10vw, 14vh) rotate(-3deg) scaleX(-1);
+		transform: translate(-24vw, 6vw) rotate(-3deg) scaleX(-1);
 		visibility: visible;
 		z-index: -9;
 		overflow: hidden;
 	}
 	10% {
-		transform: translate(-10vw, 14vh) rotate(3deg) scaleX(-1);
+		transform: translate(-24vw, 6vw) rotate(3deg) scaleX(-1);
 		visibility: visible;
 		z-index: -9;
 		overflow: hidden;
 	}
 	20% {
-		transform: translate(-10vw, 14vh) rotate(-3deg) scaleX(-1);
+		transform: translate(-24vw, 6vw) rotate(-3deg) scaleX(-1);
 		visibility: visible;
 		z-index: -9;
 		overflow: hidden;
 	}
 	30% {
-		transform: translate(-10vw, 14vh) rotate(3deg) scaleX(-1);
+		transform: translate(-24vw, 6vw) rotate(3deg) scaleX(-1);
 		visibility: visible;
 		z-index: -9;
 		overflow: hidden;
 	}
 	40% {
-		transform: translate(-10vw, 14vh) rotate(-3deg) scaleX(-1);
+		transform: translate(-24vw, 6vw) rotate(-3deg) scaleX(-1);
 		visibility: visible;
 		z-index: -9;
 		overflow: hidden;
 	}
 	50% {
-		transform: translate(-10vw, 14vh) rotate(3deg) scaleX(-1);
+		transform: translate(-24vw, 6vw) rotate(3deg) scaleX(-1);
 		visibility: visible;
 		z-index: -9;
 		overflow: hidden;
 	}
 	60% {
-		transform: translate(-10vw, 14vh) rotate(-3deg) scaleX(-1);
+		transform: translate(-24vw, 6vw) rotate(-3deg) scaleX(-1);
 		visibility: visible;
 		z-index: -9;
 		overflow: hidden;
 	}
 	70% {
-		transform: translate(-10vw, 14vh) rotate(3deg) scaleX(-1);
+		transform: translate(-24vw, 6vw) rotate(3deg) scaleX(-1);
 		visibility: visible;
 		z-index: -9;
 		overflow: hidden;
 	}
 	80% {
-		transform: translate(-10vw, 14vh) rotate(-3deg) scaleX(-1);
+		transform: translate(-24vw, 6vw) rotate(-3deg) scaleX(-1);
 		visibility: visible;
 		z-index: -9;
 		overflow: hidden;
 	}
 	90% {
-		transform: translate(-10vw, 14vh) rotate(3deg) scaleX(-1);
+		transform: translate(-24vw, 6vw) rotate(3deg) scaleX(-1);
 		visibility: visible;
 		z-index: -9;
 		overflow: hidden;
 	}
 	100% {
-		transform: translate(-10vw, 14vh) rotate(-3deg) scaleX(-1);
+		transform: translate(-24vw, 6vw) rotate(-3deg) scaleX(-1);
 		visibility: visible;
 		z-index: -9;
 		overflow: hidden;
@@ -359,9 +392,49 @@ body {
 		text-align: justify;
 		min-height: 200px;
 		// background-color: var(--bg-section-color);
-		transition: all 5s;
-		margin: 0 20vw;
-		padding: 5vw;
+		transition: all 4s;
+		margin: 0;
+		border: 1vw groove burlywood;
+		padding: 0;
+
+		.ocean-window {
+			margin: 0 auto;
+			max-width: 1800px;
+			width: 90vw;
+			z-index: -100;
+
+			.background-sky {
+				z-index: -80;
+			}
+
+			@media (prefers-reduced-motion: no-preference) {
+				.sun {
+					animation: sunshine 2s infinite linear;
+	
+					&--1 {
+						animation: intense_sunshine 2s infinite linear;
+					}
+				}
+			}
+
+			@media (prefers-reduced-motion: reduce) {
+				.sun {
+					animation: sunshine 4s infinite linear;
+				}
+			}
+			
+			.ocean {
+				z-index: -8;
+			
+				&--polluted {
+					background: linear-gradient(blue 0%, $algaeGreen 50%, blue 100%);
+				}
+			}
+		
+			.ocean-water {
+				z-index: 8;
+			}
+		}
 
 		.vector-illustration {
 			margin: 0 auto;
@@ -386,15 +459,15 @@ body {
 
 		.fishing-boat {
 			overflow: hidden;
-			max-width: 720px;
-			width: 24vw;
+			max-width: 810px;
+			width: 27vw;
 			visibility: hidden;
 			z-index: -7;
 		}
 	
 		@media (prefers-reduced-motion: no-preference) {
 			#fish_1 {
-				animation: fish-jump 5s infinite linear;
+				animation: fish-jump 4s infinite linear;
 			}
 		}
 		
@@ -405,27 +478,27 @@ body {
 		}
 		
 		.cloud_1 {
-			transform: translateX(-80%);
 			animation: moving-clouds 30s infinite linear;
 		}
 
-		#motorboat_1 {
+		// Delayed animations that are activated on being scrolled to. - Jon
+		.motorboat_1.delayed-animation--active {
 			animation: boating 10s 1 linear;
 			animation-delay: 2.5s;
 		}
 
-		#motorboat_2 {
+		.motorboat_2.delayed-animation--active {
 			transform: scaleX(-1);
 			animation: boating-still 20s infinite linear;
 			animation-delay: 12.5s;
 		}
 
-		#fishing-boat_net {
+		.fishing-boat_net.delayed-animation--active {
 			animation: boating 15s 1 linear;
 			animation-delay: 2.5s;
 		}
 
-		#fishing-boat_no_net {
+		.fishing-boat_no_net.delayed-animation--active {
 			animation: fishing-still 20s infinite linear;
 			animation-delay: 17.5s;
 		}
@@ -487,24 +560,29 @@ body {
 		color: bisque;
 	}
 }
-  
-.ocean-window {
-	margin: 0 auto;
-	max-width: 1800px;
-	width: 50vw;
-	z-index: -100;
 
-	.ocean-water {
-		z-index: 75;
+footer {
+	padding: 2vw;
+
+	section {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+		justify-content: space-around;
+
+		figure {
+			margin: 0 auto;
+			max-width: 840px;
+			width: 21vw;
+
+			img {
+				margin: inherit;
+				display: block;
+				max-width: 800px;
+				width: 20vw;
+			}
+		}
 	}
-}
-
-.background-sky {
-	z-index: -20;
-}
-
-.ocean {
-	z-index: -8;
 }
 
 .hidden-opacity {
@@ -530,5 +608,4 @@ body {
 .hidden-all {
 	opacity: 0;
 	filter: blur(15px);
-	transform: translateX(-50%);
 }
