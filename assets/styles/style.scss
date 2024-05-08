@@ -110,6 +110,37 @@ $algaeGreen: rgb(19, 75, 28);
 	}
 }
 
+@keyframes splash-cycle {
+	0% {
+		transform: translate(-3vw, 9vw) scale(1);
+		visibility: hidden;
+	}
+	10% {
+		transform: translate(-3vw, 9vw) scale(1);
+		visibility: visible;
+	}
+	20% {
+		transform: translate(-3vw, 9vw) scale(1.1);
+		visibility: visible;
+	}
+	40% {
+		transform: translate(-3vw, 9vw) scale(1);
+		visibility: hidden;
+	}
+	60% {
+		transform: translate(-3vw, 9vw) scale(1.1);
+		visibility: hidden;
+	}
+	80% {
+		transform: translate(-3vw, 9vw) scale(1.1);
+		visibility: hidden;
+	}
+	100% {
+		transform: translate(-3vw, 9vw) scale(1);
+		visibility: hidden;
+	}
+}
+
 @keyframes largenetUpDown {
     0% { transform: translateY(140px); }
     50% { transform: translateY(130px); }
@@ -167,6 +198,7 @@ $algaeGreen: rgb(19, 75, 28);
     50% { transform: translateY(130px)translatex(-60px) rotate(-45deg); }
     100% { transform: translateY(140px) translatex(-60px) rotate(-45deg); }
 }
+
 
 @keyframes dirtywine1 {
     0% { transform: translateY(140px) translateX(60px) rotate(-45deg); }
@@ -431,6 +463,78 @@ $algaeGreen: rgb(19, 75, 28);
 	}
 }
 
+@keyframes bottle-toss {
+	0% {
+		transform: translate(-22vw, 4vw) rotate(30deg);
+		visibility: visible;
+		z-index: -6;
+		overflow: hidden;
+	}
+	20% {
+		transform: translate(-20vw, 2vw) rotate(60deg);
+		visibility: visible;
+		z-index: -6;
+		overflow: hidden;
+	}
+	40% {
+		transform: translate(-18vw, 4vw) rotate(90deg);
+		visibility: visible;
+		z-index: 2;
+		overflow: hidden;
+	}
+	60% {
+		transform: translate(-16vw, 6vw) rotate(120deg);
+		visibility: visible;
+		z-index: 2;
+		overflow: hidden;
+	}
+	80% {
+		transform: translate(-14vw, 9vw) rotate(150deg);
+		visibility: visible;
+		z-index: 2;
+		overflow: hidden;
+	}
+	100% {
+		transform: translate(-12vw, 12vw) rotate(180deg);
+		visibility: visible;
+		z-index: 2;
+		overflow: hidden;
+	}
+}
+
+@keyframes bottle-float {
+	0% {
+		transform: translate(-12vw, 12vw) rotate(180deg);
+		visibility: visible;
+		z-index: 2;
+		overflow: hidden;
+	}
+	25% {
+		transform: translate(-10vw, 10vw) rotate(174deg);
+		visibility: visible;
+		z-index: 2;
+		overflow: hidden;
+	}
+	50% {
+		transform: translate(-12vw, 8vw) rotate(168deg);
+		visibility: visible;
+		z-index: 2;
+		overflow: hidden;
+	}
+	75% {
+		transform: translate(-10vw, 10vw) rotate(174deg);
+		visibility: visible;
+		z-index: 2;
+		overflow: hidden;
+	}
+	100% {
+		transform: translate(-12vw, 12vw) rotate(180deg);
+		visibility: visible;
+		z-index: 2;
+		overflow: hidden;
+	}
+}
+
 @keyframes bottleDrifting {
 	0% {
 		transform: translateY(8vw) rotate(45deg);
@@ -521,7 +625,7 @@ $algaeGreen: rgb(19, 75, 28);
 			}
 			
 			.ocean {
-				z-index: -8;
+				z-index: -12;
 			
 				&--polluted {
 					background: linear-gradient(blue 0%, $algaeGreen 50%, blue 100%);
@@ -542,12 +646,35 @@ $algaeGreen: rgb(19, 75, 28);
 			z-index: -7;
 		}
 
+		.splash {
+			max-width: 150px;
+			width: 5vw;
+			transform: translate(-3vw, 9vw);
+			visibility: hidden;
+			z-index: -10;
+		}
+
 		.motorboat {
 			overflow: hidden;
-			max-width: 450px;
-			width: 15vw;
+			max-width: 540px;
+			width: 18vw;
 			visibility: hidden;
 			z-index: -7;
+
+			// Longer vector, so scaled a bit. - Jon
+			// &--moving {
+			// 	max-width: 549px;
+			// 	width: 18.3vw;
+			// }
+			// Now handled by changing the SVG's viewbox.
+		}
+
+		.bottle_tossed {
+			overflow: hidden;
+			max-width: 15px;
+			width: 0.5vw;
+			visibility: hidden;
+			z-index: -6;
 		}
 
 		.fishing-boat {
@@ -610,6 +737,18 @@ $algaeGreen: rgb(19, 75, 28);
 			#fish_1 {
 				animation: fish-jump 4s infinite linear;
 			}
+
+			.splash {
+				&--big {
+					animation: splash-cycle 4s infinite linear;
+					animation-delay: 0s;
+				}
+
+				&--small {
+					animation: splash-cycle 4s infinite linear;
+					animation-delay: 1.6s;
+				}
+			}
 		}
 		
 		@media (prefers-reduced-motion: reduce) {
@@ -618,20 +757,43 @@ $algaeGreen: rgb(19, 75, 28);
 			}
 		}
 		
-		.cloud_1 {
-			animation: moving-clouds 30s infinite linear;
+		.cloud {
+			transform: translateX(-80%);
+
+			&--1 {
+				animation: moving-clouds 40s infinite linear;
+				opacity: 90%;
+			}
+
+			@media (prefers-reduced-motion: no-preference) {
+				&--2 {
+					animation: moving-clouds 50s infinite linear;
+					animation-delay: 10s;
+					opacity: 70%;
+				}
+			}
 		}
 
 		// Delayed animations that are activated on being scrolled to. - Jon
-		.motorboat_1.delayed-animation--active {
+		.motorboat--moving.delayed-animation--active {
 			animation: boating 10s 1 linear;
 			animation-delay: 2.5s;
 		}
 
-		.motorboat_2.delayed-animation--active {
+		.motorboat--still.delayed-animation--active {
 			transform: scaleX(-1);
 			animation: boating-still 20s infinite linear;
 			animation-delay: 12.5s;
+		}
+
+		.bottle_tossed--aerial.delayed-animation--active {
+			animation: bottle-toss 4s 1 linear;
+			animation-delay: 12.5s;
+		}
+
+		.bottle_tossed--floating.delayed-animation--active {
+			animation: bottle-float 20s infinite linear;
+			animation-delay: 16.5s;
 		}
 
 		.fishing-boat_net.delayed-animation--active {
@@ -702,27 +864,27 @@ $algaeGreen: rgb(19, 75, 28);
 		#small_net_1 {
 			animation: small_net1 9s linear infinite;
 		}
-		#Dirty_wine_1 {
+		#dirty_wine_1 {
 			width: 1vw;
 			animation: dirtywine1 7s linear infinite;
 		}
-		#Dirty_wine_2 {
+		#dirty_wine_2 {
 			width: 1vw;
 			animation: dirtywine2 7s linear infinite;
 		}
-		#Wine_1 {
+		#wine_1 {
 			width: 1vw;
 			animation: wine1 7s linear infinite;
 		}
-		#Wine_2 {
+		#wine_2 {
 			width: 1vw;
 			animation: wine2 7s linear infinite;
 		}
-		#dirty_bottle {
+		#dirty_bottle_1 {
 			width: 1vw;
 			animation: wine2 7s linear infinite;
 		}
-		#dirty_bottle2 {
+		#dirty_bottle_2 {
 			width: 1vw;
 			animation: dirtybottle1 7s linear infinite;
 		}
@@ -736,8 +898,6 @@ $algaeGreen: rgb(19, 75, 28);
 			animation: beerboxDrifting 4s linear infinite;
 			z-index: -5;
 		}
-
-	}
 }
 
 #scene_6 {
