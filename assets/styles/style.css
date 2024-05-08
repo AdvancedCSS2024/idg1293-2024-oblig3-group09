@@ -695,15 +695,15 @@ body {
   animation-delay: 17.5s;
 }
 .story__scene .empty_bottle_colored {
-  max-width: 450px;
+  max-width: 30px;
   width: 1vw;
 }
 .story__scene .waste_plastic {
-  max-width: 450px;
+  max-width: 75px;
   width: 2.5vw;
 }
 .story__scene .waste_beer_box {
-  max-width: 450px;
+  max-width: 90px;
   width: 3vw;
 }
 .story__scene #bottle_initial {
