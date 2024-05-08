@@ -171,59 +171,59 @@ $algaeGreen: rgb(19, 75, 28);
 @keyframes boating {
 	0% {
 		overflow: hidden;
-		transform: translate(36vw, 5vw) rotate(4deg);
+		transform: translate(36vw, 4vw) rotate(4deg);
 		visibility: visible;
 		z-index: -9;
 	}
 	10% {
 		overflow: hidden;
-		transform: translate(20vw, 3vw) rotate(0deg);
+		transform: translate(20vw, 2vw) rotate(0deg);
 		visibility: visible;
 		z-index: -9;
 	}
 	20% {
-		transform: translate(0vw, 3vw) rotate(-4deg);
+		transform: translate(0vw, 2vw) rotate(-4deg);
 		visibility: visible;
 		z-index: -9;
 	}
 	30% {
-		transform: translate(-8vw, 4vw) rotate(0deg);
+		transform: translate(-8vw, 3vw) rotate(0deg);
 		visibility: visible;
 		z-index: -9;
 	}
 	40% {
-		transform: translate(-16vw, 5vw) rotate(4deg);
+		transform: translate(-16vw, 4vw) rotate(4deg);
 		visibility: visible;
 		z-index: -9;
 	}
 	50% {
-		transform: translate(-20vw, 5vw) rotate(0deg);
+		transform: translate(-20vw, 4vw) rotate(0deg);
 		visibility: visible;
 		z-index: -9;
 	}
 	60% {
-		transform: translate(-24vw, 6vw) rotate(-4deg);
+		transform: translate(-24vw, 5vw) rotate(-4deg);
 		visibility: visible;
 		z-index: -9;
 	}
 	70% {
-		transform: translate(-24vw, 6vw) rotate(0deg);
+		transform: translate(-24vw, 5vw) rotate(0deg);
 		visibility: visible;
 		z-index: -9;
 	}
 	80% {
-		transform: translate(-24vw, 6vw) rotate(4deg);
+		transform: translate(-24vw, 5vw) rotate(4deg);
 		visibility: visible;
 		z-index: -9;
 	}
 	90% {
-		transform: translate(-24vw, 6vw) rotate(0deg);
+		transform: translate(-24vw, 5vw) rotate(0deg);
 		visibility: visible;
 		z-index: -9;
 		overflow: hidden;
 	}
 	100% {
-		transform: translate(-24vw, 6vw) rotate(-3deg);
+		transform: translate(-24vw, 5vw) rotate(-3deg);
 		visibility: visible;
 		z-index: -9;
 		overflow: hidden;
@@ -232,67 +232,67 @@ $algaeGreen: rgb(19, 75, 28);
 
 @keyframes boating-still {
 	0% {
-		transform: translate(-24vw, 6vw) rotate(-3deg);
+		transform: translate(-24vw, 5vw) rotate(-3deg);
 		visibility: visible;
 		z-index: -9;
 		overflow: hidden;
 	}
 	10% {
-		transform: translate(-24vw, 6vw) rotate(3deg);
+		transform: translate(-24vw, 5vw) rotate(3deg);
 		visibility: visible;
 		z-index: -9;
 		overflow: hidden;
 	}
 	20% {
-		transform: translate(-24vw, 6vw) rotate(-3deg);
+		transform: translate(-24vw, 5vw) rotate(-3deg);
 		visibility: visible;
 		z-index: -9;
 		overflow: hidden;
 	}
 	30% {
-		transform: translate(-24vw, 6vw) rotate(3deg);
+		transform: translate(-24vw, 5vw) rotate(3deg);
 		visibility: visible;
 		z-index: -9;
 		overflow: hidden;
 	}
 	40% {
-		transform: translate(-24vw, 6vw) rotate(-3deg);
+		transform: translate(-24vw, 5vw) rotate(-3deg);
 		visibility: visible;
 		z-index: -9;
 		overflow: hidden;
 	}
 	50% {
-		transform: translate(-24vw, 6vw) rotate(3deg);
+		transform: translate(-24vw, 5vw) rotate(3deg);
 		visibility: visible;
 		z-index: -9;
 		overflow: hidden;
 	}
 	60% {
-		transform: translate(-24vw, 6vw) rotate(-3deg);
+		transform: translate(-24vw, 5vw) rotate(-3deg);
 		visibility: visible;
 		z-index: -9;
 		overflow: hidden;
 	}
 	70% {
-		transform: translate(-24vw, 6vw) rotate(3deg);
+		transform: translate(-24vw, 5vw) rotate(3deg);
 		visibility: visible;
 		z-index: -9;
 		overflow: hidden;
 	}
 	80% {
-		transform: translate(-24vw, 6vw) rotate(-3deg);
+		transform: translate(-24vw, 5vw) rotate(-3deg);
 		visibility: visible;
 		z-index: -9;
 		overflow: hidden;
 	}
 	90% {
-		transform: translate(-24vw, 6vw) rotate(3deg);
+		transform: translate(-24vw, 5vw) rotate(3deg);
 		visibility: visible;
 		z-index: -9;
 		overflow: hidden;
 	}
 	100% {
-		transform: translate(-24vw, 6vw) rotate(-3deg);
+		transform: translate(-24vw, 5vw) rotate(-3deg);
 		visibility: visible;
 		z-index: -9;
 		overflow: hidden;
@@ -301,69 +301,102 @@ $algaeGreen: rgb(19, 75, 28);
 
 @keyframes fishing-still {
 	0% {
-		transform: translate(-24vw, 6vw) rotate(-3deg) scaleX(-1);
+		transform: translate(-24vw, 5vw) rotate(-3deg) scaleX(-1);
 		visibility: visible;
 		z-index: -9;
 		overflow: hidden;
 	}
 	10% {
-		transform: translate(-24vw, 6vw) rotate(3deg) scaleX(-1);
+		transform: translate(-24vw, 5vw) rotate(3deg) scaleX(-1);
 		visibility: visible;
 		z-index: -9;
 		overflow: hidden;
 	}
 	20% {
-		transform: translate(-24vw, 6vw) rotate(-3deg) scaleX(-1);
+		transform: translate(-24vw, 5vw) rotate(-3deg) scaleX(-1);
 		visibility: visible;
 		z-index: -9;
 		overflow: hidden;
 	}
 	30% {
-		transform: translate(-24vw, 6vw) rotate(3deg) scaleX(-1);
+		transform: translate(-24vw, 5vw) rotate(3deg) scaleX(-1);
 		visibility: visible;
 		z-index: -9;
 		overflow: hidden;
 	}
 	40% {
-		transform: translate(-24vw, 6vw) rotate(-3deg) scaleX(-1);
+		transform: translate(-24vw, 5vw) rotate(-3deg) scaleX(-1);
 		visibility: visible;
 		z-index: -9;
 		overflow: hidden;
 	}
 	50% {
-		transform: translate(-24vw, 6vw) rotate(3deg) scaleX(-1);
+		transform: translate(-24vw, 5vw) rotate(3deg) scaleX(-1);
 		visibility: visible;
 		z-index: -9;
 		overflow: hidden;
 	}
 	60% {
-		transform: translate(-24vw, 6vw) rotate(-3deg) scaleX(-1);
+		transform: translate(-24vw, 5vw) rotate(-3deg) scaleX(-1);
 		visibility: visible;
 		z-index: -9;
 		overflow: hidden;
 	}
 	70% {
-		transform: translate(-24vw, 6vw) rotate(3deg) scaleX(-1);
+		transform: translate(-24vw, 5vw) rotate(3deg) scaleX(-1);
 		visibility: visible;
 		z-index: -9;
 		overflow: hidden;
 	}
 	80% {
-		transform: translate(-24vw, 6vw) rotate(-3deg) scaleX(-1);
+		transform: translate(-24vw, 5vw) rotate(-3deg) scaleX(-1);
 		visibility: visible;
 		z-index: -9;
 		overflow: hidden;
 	}
 	90% {
-		transform: translate(-24vw, 6vw) rotate(3deg) scaleX(-1);
+		transform: translate(-24vw, 5vw) rotate(3deg) scaleX(-1);
 		visibility: visible;
 		z-index: -9;
 		overflow: hidden;
 	}
 	100% {
-		transform: translate(-24vw, 6vw) rotate(-3deg) scaleX(-1);
+		transform: translate(-24vw, 5vw) rotate(-3deg) scaleX(-1);
 		visibility: visible;
 		z-index: -9;
+		overflow: hidden;
+	}
+}
+
+@keyframes net-float {
+	0% {
+		transform: translate(-26vw, 10vw) rotate(-3deg);
+		visibility: visible;
+		z-index: 1;
+		overflow: hidden;
+	}
+	25% {
+		transform: translate(-14vw, 10.5vw) rotate(3deg);
+		visibility: visible;
+		z-index: 1;
+		overflow: hidden;
+	}
+	50% {
+		transform: translate(-2vw, 11vw) rotate(-3deg);
+		visibility: visible;
+		z-index: 1;
+		overflow: hidden;
+	}
+	75% {
+		transform: translate(10vw, 11.5vw) rotate(-3deg);
+		visibility: visible;
+		z-index: 1;
+		overflow: hidden;
+	}
+	100% {
+		transform: translate(22vw, 12vw) rotate(-3deg);
+		visibility: hidden;
+		z-index: 1;
 		overflow: hidden;
 	}
 }
@@ -464,6 +497,27 @@ $algaeGreen: rgb(19, 75, 28);
 			visibility: hidden;
 			z-index: -7;
 		}
+
+		.fishing-boat {
+			overflow: hidden;
+			max-width: 810px;
+			width: 27vw;
+			visibility: hidden;
+			z-index: -7;
+		}
+
+		.large_net {
+			overflow: hidden;
+			max-width: 495px;
+			width: 16.5vw;
+			visibility: hidden;
+			z-index: 1;
+
+			&--drifting {
+				animation: largenetUpDown 5s linear infinite;
+				visibility: visible;
+			}
+		}
 	
 		@media (prefers-reduced-motion: no-preference) {
 			#fish_1 {
@@ -503,10 +557,9 @@ $algaeGreen: rgb(19, 75, 28);
 			animation-delay: 17.5s;
 		}
 
-		.large_net {
-			max-width: 330px;
-			animation: largenetUpDown 5s linear infinite;
-			z-index: 1;
+		.large_net.delayed-animation--active {
+			animation: net-float 20s 1 linear;
+			animation-delay: 17.5s;
 		}
 
 		.empty_bottle_colored {
