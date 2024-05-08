@@ -743,14 +743,6 @@ body {
 .story__scene #small_net_1 {
   animation: small_net1 9s linear infinite;
 }
-.story__scene #waste_plastic {
-  animation: plasticDrifting 7s linear infinite;
-  z-index: -5;
-}
-.story__scene #waste_beer_box {
-  animation: beerboxDrifting 4s linear infinite;
-  z-index: -5;
-}
 .story__scene #Dirty_wine_1 {
   width: 1vw;
   animation: dirtywine1 7s linear infinite;
@@ -774,6 +766,14 @@ body {
 .story__scene #dirty_bottle2 {
   width: 1vw;
   animation: dirtybottle1 7s linear infinite;
+}
+.story__scene #waste_plastic {
+  animation: plasticDrifting 7s linear infinite;
+  z-index: -5;
+}
+.story__scene #waste_beer_box {
+  animation: beerboxDrifting 4s linear infinite;
+  z-index: -5;
 }
 
 #scene_6 .ocean-window {
