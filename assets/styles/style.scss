@@ -412,6 +412,40 @@ $algaeGreen: rgb(19, 75, 28);
 	}
 }
 
+@keyframes net-float {
+	0% {
+		transform: translate(-26vw, 10vw) rotate(-3deg);
+		visibility: visible;
+		z-index: 1;
+		overflow: hidden;
+	}
+	25% {
+		transform: translate(-14vw, 10.5vw) rotate(3deg);
+		visibility: visible;
+		z-index: 1;
+		overflow: hidden;
+	}
+	50% {
+		transform: translate(-2vw, 11vw) rotate(-3deg);
+		visibility: visible;
+		z-index: 1;
+		overflow: hidden;
+	}
+	75% {
+		transform: translate(10vw, 11.5vw) rotate(-3deg);
+		visibility: visible;
+		z-index: 1;
+		overflow: hidden;
+	}
+	100% {
+		transform: translate(22vw, 12vw) rotate(-3deg);
+		visibility: hidden;
+		z-index: 1;
+		overflow: hidden;
+	}
+}
+
+
 .story {
 	&__scene {
 		display: flex;
