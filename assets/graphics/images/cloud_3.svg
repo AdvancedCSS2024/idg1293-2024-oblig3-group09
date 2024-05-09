@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 141.56 86.77">
+<svg id="cloud_c" data-name="cloud_c" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 141.56 86.77">
   <defs>
     <style>
       .cls-1 {
@@ -8,7 +8,7 @@
       }
     </style>
   </defs>
-  <g id="Layer_1-2" data-name="Layer 1">
+  <g id="cloud_c__path" data-name="cloud_c__path">
     <ellipse class="cls-1" cx="20.65" cy="34.14" rx="15.82" ry="14.22" transform="translate(-15.45 51.12) rotate(-84.03)"/>
     <circle class="cls-1" cx="19.35" cy="46.54" r="17.17"/>
     <circle class="cls-1" cx="37.71" cy="20.93" r="15.59"/>
