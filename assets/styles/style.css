@@ -700,59 +700,127 @@ p {
 @keyframes cleanupMove {
   0% {
     overflow: hidden;
-    transform: translate(10vw, 4vw) rotate(1deg);
+    transform: translate(36vw, 4vw) rotate(2deg);
     visibility: visible;
     z-index: -9;
   }
   10% {
     overflow: hidden;
-    transform: translate(5vw, 2vw) rotate(0deg);
+    transform: translate(20vw, 2vw) rotate(0deg);
     visibility: visible;
     z-index: -9;
   }
   20% {
-    transform: translate(0vw, 2vw) rotate(1deg);
+    transform: translate(0vw, 2vw) rotate(2deg);
     visibility: visible;
     z-index: -9;
   }
   30% {
-    transform: translate(0vw, 2vw) rotate(0deg);
+    transform: translate(-8vw, 3vw) rotate(0deg);
     visibility: visible;
     z-index: -9;
   }
   40% {
-    transform: translate(-1vw, 2vw) rotate(1deg);
+    transform: translate(-16vw, 4vw) rotate(2deg);
     visibility: visible;
     z-index: -9;
   }
   50% {
-    transform: translate(-2vw, 2vw) rotate(0deg);
+    transform: translate(-16vw, 4vw) rotate(0deg);
     visibility: visible;
     z-index: -9;
   }
   60% {
-    transform: translate(-3vw, -1vw) rotate(1deg);
+    transform: translate(-16vw, 5vw) rotate(2deg);
     visibility: visible;
     z-index: -9;
   }
   70% {
-    transform: translate(-2vw, 2vw) rotate(0deg);
+    transform: translate(-16vw, 5vw) rotate(0deg);
     visibility: visible;
     z-index: -9;
   }
   80% {
-    transform: translate(-1vw, -2vw) rotate(1deg);
+    transform: translate(-16vw, 5vw) rotate(2deg);
     visibility: visible;
     z-index: -9;
   }
   90% {
-    transform: translate(0vw, 2vw) rotate(0deg);
+    transform: translate(-16vw, 5vw) rotate(0deg);
     visibility: visible;
     z-index: -9;
     overflow: hidden;
   }
   100% {
-    transform: translate(1vw, -2vw) rotate(-1deg);
+    transform: translate(-16vw, 5vw) rotate(2deg);
+    visibility: visible;
+    z-index: -9;
+    overflow: hidden;
+  }
+}
+@keyframes cleanupStill {
+  0% {
+    transform: translate(-16vw, 5vw) rotate(2deg);
+    visibility: visible;
+    z-index: -9;
+    overflow: hidden;
+  }
+  10% {
+    transform: translate(-16vw, 5vw) rotate(0deg);
+    visibility: visible;
+    z-index: -9;
+    overflow: hidden;
+  }
+  20% {
+    transform: translate(-16vw, 5vw) rotate(2deg);
+    visibility: visible;
+    z-index: -9;
+    overflow: hidden;
+  }
+  30% {
+    transform: translate(-16vw, 5vw) rotate(0deg);
+    visibility: visible;
+    z-index: -9;
+    overflow: hidden;
+  }
+  40% {
+    transform: translate(-16vw, 5vw) rotate(2deg);
+    visibility: visible;
+    z-index: -9;
+    overflow: hidden;
+  }
+  50% {
+    transform: translate(-16vw, 5vw) rotate(0deg);
+    visibility: visible;
+    z-index: -9;
+    overflow: hidden;
+  }
+  60% {
+    transform: translate(-16vw, 5vw) rotate(2deg);
+    visibility: visible;
+    z-index: -9;
+    overflow: hidden;
+  }
+  70% {
+    transform: translate(-16vw, 5vw) rotate(0deg);
+    visibility: visible;
+    z-index: -9;
+    overflow: hidden;
+  }
+  80% {
+    transform: translate(-16vw, 5vw) rotate(2deg);
+    visibility: visible;
+    z-index: -9;
+    overflow: hidden;
+  }
+  90% {
+    transform: translate(-16vw, 5vw) rotate(0deg);
+    visibility: visible;
+    z-index: -9;
+    overflow: hidden;
+  }
+  100% {
+    transform: translate(-16vw, 5vw) rotate(2deg);
     visibility: visible;
     z-index: -9;
     overflow: hidden;
@@ -846,6 +914,24 @@ p {
   width: 27vw;
   visibility: hidden;
   z-index: -7;
+}
+.story__scene .cleanup_boat {
+  overflow: hidden;
+  max-width: 1620px;
+  width: 54vw;
+  visibility: hidden;
+  z-index: -7;
+  animation: cleanupMove 20s 1 linear;
+  animation-delay: 2s;
+}
+.story__scene .cleanup_boat_2 {
+  overflow: hidden;
+  max-width: 1620px;
+  width: 54vw;
+  visibility: hidden;
+  z-index: -7;
+  animation: cleanupStill 20s infinite linear;
+  animation-delay: 18s;
 }
 .story__scene .large_net {
   overflow: hidden;
@@ -1066,4 +1152,82 @@ footer section figure img {
 .hidden-all {
   opacity: 0;
   filter: blur(15px);
+}
+
+@keyframes bounce {
+  0% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-10px);
+  }
+  100% {
+      transform: translateY(0);
+  }
+}
+
+footer section figure img:hover {
+  animation: bounce 0.5s ease;
+}
+
+@keyframes cleanupMove {
+  0% {
+    overflow: hidden;
+    transform: translate(10vw, 4vw) rotate(1deg);
+    visibility: visible;
+    z-index: -9;
+  }
+  10% {
+    overflow: hidden;
+    transform: translate(5vw, 2vw) rotate(0deg);
+    visibility: visible;
+    z-index: -9;
+  }
+  20% {
+    transform: translate(0vw, 2vw) rotate(1deg);
+    visibility: visible;
+    z-index: -9;
+  }
+  30% {
+    transform: translate(0vw, 2vw) rotate(0deg);
+    visibility: visible;
+    z-index: -9;
+  }
+  40% {
+    transform: translate(-1vw, 2vw) rotate(1deg);
+    visibility: visible;
+    z-index: -9;
+  }
+  50% {
+    transform: translate(-2vw, 2vw) rotate(0deg);
+    visibility: visible;
+    z-index: -9;
+  }
+  60% {
+    transform: translate(-3vw, -1vw) rotate(1deg);
+    visibility: visible;
+    z-index: -9;
+  }
+  70% {
+    transform: translate(-2vw, 2vw) rotate(0deg);
+    visibility: visible;
+    z-index: -9;
+  }
+  80% {
+    transform: translate(-1vw, -2vw) rotate(1deg);
+    visibility: visible;
+    z-index: -9;
+  }
+  90% {
+    transform: translate(0vw, 2vw) rotate(0deg);
+    visibility: visible;
+    z-index: -9;
+    overflow: hidden;
+  }
+  100% {
+    transform: translate(1vw, -2vw) rotate(-1deg);
+    visibility: visible;
+    z-index: -9;
+    overflow: hidden;
+  }
 }/*# sourceMappingURL=style.css.map */
