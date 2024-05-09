@@ -980,6 +980,22 @@ footer section figure img {
   filter: blur(15px);
 }
 
+@keyframes bounce {
+  0% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-10px);
+  }
+  100% {
+      transform: translateY(0);
+  }
+}
+
+footer section figure img:hover {
+  animation: bounce 0.5s ease;
+}
+
 @keyframes cleanupMove {
   0% {
     overflow: hidden;
