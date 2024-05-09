@@ -627,12 +627,14 @@ $algaeGreen: rgb(19, 75, 28);
 		transform: translate(25vw, 1vw) rotate(2deg);
 		visibility: visible;
 		z-index: -9;
+		opacity: 0;
 	}
 	10% {
 		overflow: hidden;
 		transform: translate(10vw, -1vw) rotate(0deg);
 		visibility: visible;
 		z-index: -9;
+		opacity: 1;
 	}
 	20% {
 		transform: translate(0vw, -1vw) rotate(2deg);
@@ -875,20 +877,7 @@ $algaeGreen: rgb(19, 75, 28);
 			width: 54vw;
 			visibility: hidden;
 			z-index: -7;
-			animation: cleanupMove 20s 1 linear;
-			animation-delay: 2s;
 		}
-
-		.cleanup_boat_2 {
-			overflow: hidden;
-			max-width: 1620px;
-			width: 54vw;
-			visibility: hidden;
-			z-index: -7;
-			animation: cleanupStill 20s infinite linear;
-			animation-delay: 18s;
-		}
-
 
 		.large_net {
 			overflow: hidden;
@@ -1025,6 +1014,16 @@ $algaeGreen: rgb(19, 75, 28);
 			animation: floating_net 20s 1 linear;
 			animation-delay: 17.5s;
 		}
+		.cleanup_boat_1.delayed-animation--active {
+			animation: cleanupMove 20s 1 linear;
+			animation-delay: 2s;
+		}
+		
+		.cleanup_boat_2.delayed-animation--active {
+			animation: cleanupStill 20s infinite linear;
+			animation-delay: 18s;
+		}
+		
 
 		// Always active animations
 		#empty_bottle_drifting {
