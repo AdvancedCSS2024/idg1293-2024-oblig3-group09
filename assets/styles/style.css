@@ -26,6 +26,9 @@ p {
 a {
   color: blue;
 }
+a:hover {
+  background-color: white;
+}
 
 @keyframes text_fade-in {
   0% {
@@ -80,46 +83,88 @@ a {
     filter: brightness(100%);
   }
 }
-@keyframes moving-clouds {
+@keyframes moving_clouds_path_1 {
   0% {
-    transform: translateX(-50vw);
+    transform: translate(-35vw, 3vw);
   }
   20% {
-    transform: translateX(-25vw);
+    transform: translate(-10vw, 3vw);
   }
   40% {
-    transform: translateX(0vw);
+    transform: translate(15vw, 3vw);
   }
   60% {
-    transform: translateX(25vw);
+    transform: translate(40vw, 3vw);
   }
   80% {
-    transform: translateX(50vw);
+    transform: translate(65vw, 3vw);
   }
   100% {
-    transform: translateX(75vw);
+    transform: translate(90vw, 3vw);
+  }
+}
+@keyframes moving_clouds_path_2 {
+  0% {
+    transform: translate(-35vw, 5vw);
+  }
+  20% {
+    transform: translate(-10vw, 5vw);
+  }
+  40% {
+    transform: translate(15vw, 5vw);
+  }
+  60% {
+    transform: translate(40vw, 5vw);
+  }
+  80% {
+    transform: translate(65vw, 5vw);
+  }
+  100% {
+    transform: translate(90vw, 5vw);
+  }
+}
+@keyframes offset-down {
+  0% {
+    transform: translateY(4vw);
+  }
+  50% {
+    transform: translateY(4vw);
+  }
+  100% {
+    transform: translateY(4vw);
+  }
+}
+@keyframes offset-up {
+  0% {
+    transform: translateY(-4vw);
+  }
+  50% {
+    transform: translateY(-4vw);
+  }
+  100% {
+    transform: translateY(-4vw);
   }
 }
 @keyframes fish-jump {
   0% {
     transform: scalex(-1) translate(0, 5vw) rotate(45deg);
   }
-  10% {
+  5% {
     transform: scalex(-1) translate(-4vw, 1vw) rotate(30deg);
   }
-  20% {
+  10% {
     transform: scalex(-1) translate(-8vw, -2vw) rotate(15deg);
   }
-  30% {
+  15% {
     transform: scalex(-1) translate(-12vw, -4vw) rotate(0deg);
   }
-  40% {
+  20% {
     transform: scalex(-1) translate(-16vw, -2vw) rotate(-15deg);
   }
-  50% {
+  25% {
     transform: scalex(-1) translate(-20vw, 1vw) rotate(-30deg);
   }
-  60% {
+  30% {
     transform: scalex(-1) translate(-24vw, 5vw) rotate(-45deg);
     visibility: hidden;
   }
@@ -151,188 +196,72 @@ a {
     visibility: hidden;
   }
 }
-@keyframes splash-cycle {
+@keyframes splash-visibility {
   0% {
-    transform: translate(-3vw, 8vw) scale(1);
     visibility: hidden;
   }
   10% {
-    transform: translate(-3vw, 8vw) scale(1);
     visibility: visible;
+  }
+  15% {
+    visibility: visible;
+    opacity: 80%;
+  }
+  20% {
+    visibility: visible;
+    opacity: 60%;
+  }
+  30% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+@keyframes splash-offset_left {
+  0% {
+    transform: translate(-3vw, 8vw) scale(1);
+  }
+  10% {
+    transform: translate(-3vw, 8vw) scale(1);
   }
   20% {
     transform: translate(-3vw, 8vw) scale(1.1);
-    visibility: visible;
   }
   40% {
     transform: translate(-3vw, 8vw) scale(1);
-    visibility: hidden;
   }
   60% {
     transform: translate(-3vw, 8vw) scale(1.1);
-    visibility: hidden;
   }
   80% {
     transform: translate(-3vw, 8vw) scale(1.1);
-    visibility: hidden;
   }
   100% {
     transform: translate(-3vw, 8vw) scale(1);
-    visibility: hidden;
   }
 }
-@keyframes largenetUpDown {
+@keyframes splash-offset_right {
   0% {
-    transform: translateY(140px);
+    transform: translate(27vw, 8vw) scale(1);
   }
-  50% {
-    transform: translateY(130px);
+  10% {
+    transform: translate(27vw, 8vw) scale(1);
+  }
+  20% {
+    transform: translate(27vw, 8vw) scale(1.1);
+  }
+  40% {
+    transform: translate(27vw, 8vw) scale(1);
+  }
+  60% {
+    transform: translate(27vw, 8vw) scale(1.1);
+  }
+  80% {
+    transform: translate(27vw, 8vw) scale(1.1);
   }
   100% {
-    transform: translateY(140px);
-  }
-}
-@keyframes bottleUpDown1 {
-  0% {
-    transform: translateY(140px) rotate(45deg);
-  }
-  50% {
-    transform: translateY(130px) rotate(45deg);
-  }
-  100% {
-    transform: translateY(140px) rotate(45deg);
-  }
-}
-@keyframes bottleUpDown2 {
-  0% {
-    transform: translateY(140px) translateX(100px) rotate(-45deg);
-  }
-  50% {
-    transform: translateY(130px) translatex(100px) rotate(-45deg);
-  }
-  100% {
-    transform: translateY(140px) translatex(100px) rotate(-45deg);
-  }
-}
-@keyframes bottleUpDown3 {
-  0% {
-    transform: translateY(140px) translateX(-50px) rotate(-45deg);
-  }
-  50% {
-    transform: translateY(130px) translatex(-50px) rotate(-45deg);
-  }
-  100% {
-    transform: translateY(140px) translatex(-50px) rotate(-45deg);
-  }
-}
-@keyframes bottleUpDown4 {
-  0% {
-    transform: translateY(100px) translateX(50px) rotate(-45deg);
-  }
-  50% {
-    transform: translateY(90px) translatex(50px) rotate(-45deg);
-  }
-  100% {
-    transform: translateY(100px) translatex(50px) rotate(-45deg);
-  }
-}
-@keyframes bottleUpDown5 {
-  0% {
-    transform: translateY(100px) translateX(-40px) rotate(45deg);
-  }
-  50% {
-    transform: translateY(90px) translatex(-40px) rotate(45deg);
-  }
-  100% {
-    transform: translateY(100px) translatex(-40px) rotate(45deg);
-  }
-}
-@keyframes greybottleUpDown1 {
-  0% {
-    transform: translateY(160px) translatex(70px) rotate(45deg);
-  }
-  50% {
-    transform: translateY(150px) translatex(70px) rotate(45deg);
-  }
-  100% {
-    transform: translateY(160px) translatex(70px) rotate(45deg);
-  }
-}
-@keyframes greybottleUpDown2 {
-  0% {
-    transform: translateY(100px) translateX(-90px) rotate(-45deg);
-  }
-  50% {
-    transform: translateY(90px) translatex(-90px) rotate(-45deg);
-  }
-  100% {
-    transform: translateY(100px) translatex(-90px) rotate(-45deg);
-  }
-}
-@keyframes greybottleUpDown3 {
-  0% {
-    transform: translateY(170px) translateX(-60px) rotate(-45deg);
-  }
-  50% {
-    transform: translateY(160px) translatex(-60px) rotate(-45deg);
-  }
-  100% {
-    transform: translateY(170px) translatex(-60px) rotate(-45deg);
-  }
-}
-@keyframes dirtywine1 {
-  0% {
-    transform: translateY(140px) translateX(60px) rotate(-45deg);
-  }
-  50% {
-    transform: translateY(130px) translatex(60px) rotate(-45deg);
-  }
-  100% {
-    transform: translateY(140px) translatex(60px) rotate(-45deg);
-  }
-}
-@keyframes dirtywine2 {
-  0% {
-    transform: translateY(100px) translateX(-100px) rotate(45deg);
-  }
-  50% {
-    transform: translateY(90px) translatex(-100px) rotate(45deg);
-  }
-  100% {
-    transform: translateY(100px) translatex(-100px) rotate(45deg);
-  }
-}
-@keyframes wine1 {
-  0% {
-    transform: translateY(140px) translateX(-100px) rotate(45deg);
-  }
-  50% {
-    transform: translateY(130px) translatex(-100px) rotate(45deg);
-  }
-  100% {
-    transform: translateY(140px) translatex(-100px) rotate(45deg);
-  }
-}
-@keyframes wine2 {
-  0% {
-    transform: translateY(140px) translateX(130px) rotate(45deg);
-  }
-  50% {
-    transform: translateY(130px) translatex(130px) rotate(45deg);
-  }
-  100% {
-    transform: translateY(140px) translatex(130px) rotate(45deg);
-  }
-}
-@keyframes dirtybottle1 {
-  0% {
-    transform: translateY(80px) translateX(110px) rotate(-45deg);
-  }
-  50% {
-    transform: translateY(70px) translatex(110px) rotate(-45deg);
-  }
-  100% {
-    transform: translateY(80px) translatex(110px) rotate(-45deg);
+    transform: translate(27vw, 8vw) scale(1);
   }
 }
 @keyframes boating {
@@ -564,15 +493,26 @@ a {
     overflow: hidden;
   }
 }
-@keyframes drifting_turned_net {
+@keyframes bobbing_net {
   0% {
-    transform: translateX(-4vw) translateY(6vw) rotate(-45deg);
+    transform: translateY(8vw);
   }
   50% {
-    transform: translatex(-4vw) translateY(5vw) rotate(-40deg);
+    transform: translateY(7vw);
   }
   100% {
-    transform: translatex(-4vw) translateY(6vw) rotate(-45deg);
+    transform: translateY(8vw);
+  }
+}
+@keyframes drifting_turned_net {
+  0% {
+    transform: translateX(-4vw) translateY(4.5vw) rotate(-45deg);
+  }
+  50% {
+    transform: translatex(-4vw) translateY(3.5vw) rotate(-40deg);
+  }
+  100% {
+    transform: translatex(-4vw) translateY(4.5vw) rotate(-45deg);
   }
 }
 @keyframes bottle-toss {
@@ -689,16 +629,71 @@ a {
 }
 @keyframes beerboxDrifting {
   0% {
-    transform: translateX(-13vw) translateY(4vw) rotate(15deg);
+    transform: translateX(-13vw) translateY(3.2vw) rotate(15deg);
     z-index: -5;
   }
   50% {
-    transform: translateX(-13vw) translateY(4.5vw) rotate(20deg);
+    transform: translateX(-13vw) translateY(3.7vw) rotate(20deg);
     z-index: -5;
   }
   100% {
-    transform: translateX(-13vw) translateY(4vw) rotate(15deg);
+    transform: translateX(-13vw) translateY(3.2vw) rotate(15deg);
     z-index: -5;
+  }
+}
+@keyframes glass_bottle_bob {
+  0% {
+    transform: translateY(8vw) rotate(45deg);
+  }
+  50% {
+    transform: translateY(7vw) rotate(39deg);
+  }
+  100% {
+    transform: translateY(8vw) rotate(45deg);
+  }
+}
+@keyframes plastic_bottle_bob_high {
+  0% {
+    transform: translateY(6vw) rotate(45deg);
+  }
+  50% {
+    transform: translateY(5vw) rotate(36deg);
+  }
+  100% {
+    transform: translateY(6vw) rotate(45deg);
+  }
+}
+@keyframes plastic_bottle_bob_high_turned {
+  0% {
+    transform: translateY(6vw) rotate(-45deg);
+  }
+  50% {
+    transform: translateY(5vw) rotate(-36deg);
+  }
+  100% {
+    transform: translateY(6vw) rotate(-45deg);
+  }
+}
+@keyframes plastic_bottle_bob_low {
+  0% {
+    transform: translateY(7.5vw) rotate(41deg);
+  }
+  50% {
+    transform: translateY(6.5vw) rotate(36deg);
+  }
+  100% {
+    transform: translateY(7.5vw) rotate(41deg);
+  }
+}
+@keyframes plastic_bottle_bob_low_turned {
+  0% {
+    transform: translateY(6.5vw) rotate(-41deg);
+  }
+  50% {
+    transform: translateY(7.5vw) rotate(-36deg);
+  }
+  100% {
+    transform: translateY(6.5vw) rotate(-41deg);
   }
 }
 @keyframes cleanupMove {
@@ -832,6 +827,17 @@ a {
     overflow: hidden;
   }
 }
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 .story__scene {
   display: flex;
   flex-direction: column;
@@ -869,11 +875,53 @@ a {
     animation: sunshine 4s infinite linear;
   }
 }
+.story__scene .ocean-window .cloud {
+  margin: 0 auto;
+  display: block;
+  max-width: 300px;
+  width: 10vw;
+  transform: translate(-35vw, 4vw);
+}
+.story__scene .ocean-window .cloud--type_c#cloud_c3 {
+  transform: translate(55vw, 5.5vw);
+  opacity: 88%;
+}
+.story__scene .ocean-window .cloud--type_gray_a#cloud_gray_a3 {
+  transform: translate(57vw, 5.2vw) scaleX(-1);
+  opacity: 78%;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .story__scene .ocean-window .cloud--type_a#cloud_a1, .story__scene .ocean-window .cloud--type_a#cloud_a2, .story__scene .ocean-window .cloud--type_a#cloud_a3, .story__scene .ocean-window .cloud--type_a#cloud_a4, .story__scene .ocean-window .cloud--type_a#cloud_a5, .story__scene .ocean-window .cloud--type_a#cloud_a7 {
+    animation: moving_clouds_path_1 50s infinite linear;
+    opacity: 90%;
+  }
+  .story__scene .ocean-window .cloud--type_b#cloud_b3, .story__scene .ocean-window .cloud--type_b#cloud_b7 {
+    animation: moving_clouds_path_2 60s infinite linear;
+    animation-delay: 5s;
+    opacity: 100%;
+  }
+  .story__scene .ocean-window .cloud--type_gray_a#cloud_gray_a6 {
+    animation: moving_clouds_path_1 40s infinite linear;
+    opacity: 92%;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .story__scene .ocean-window .cloud--type_a#cloud_a1, .story__scene .ocean-window .cloud--type_a#cloud_a2, .story__scene .ocean-window .cloud--type_a#cloud_a3, .story__scene .ocean-window .cloud--type_a#cloud_a4, .story__scene .ocean-window .cloud--type_a#cloud_a5, .story__scene .ocean-window .cloud--type_a#cloud_a7 {
+    animation: moving_clouds_path_1 100s infinite linear;
+    opacity: 90%;
+  }
+  .story__scene .ocean-window .cloud--type_gray_a#cloud_gray_a6 {
+    animation: moving_clouds_path_1 80s infinite linear;
+    opacity: 92%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .story__scene .ocean-window .cloud {
+    display: none;
+  }
+}
 .story__scene .ocean-window .ocean {
   z-index: -12;
-}
-.story__scene .ocean-window .ocean--polluted {
-  background: linear-gradient(blue 0%, rgb(19, 75, 28) 50%, blue 100%);
 }
 .story__scene .vector-illustration {
   margin: 0 auto;
@@ -881,10 +929,17 @@ a {
   position: absolute;
 }
 .story__scene .fish {
-  transform: scalex(-1);
   max-width: 300px;
   width: 10vw;
+  transform: scalex(-1);
   z-index: -7;
+}
+.story__scene .fish--dead {
+  max-width: 45px;
+  width: 1.5vw;
+  left: 43vw;
+  z-index: -16;
+  animation: glass_bottle_bob 8s linear infinite;
 }
 .story__scene .splash {
   max-width: 150px;
@@ -927,6 +982,17 @@ a {
   width: 54vw;
   visibility: hidden;
   z-index: -7;
+  animation: cleanupMove 20s 1 linear;
+  animation-delay: 2s;
+}
+.story__scene .cleanup_boat_2 {
+  overflow: hidden;
+  max-width: 1620px;
+  width: 54vw;
+  visibility: hidden;
+  z-index: -7;
+  animation: cleanupStill 20s infinite linear;
+  animation-delay: 18s;
 }
 .story__scene .large_net {
   overflow: hidden;
@@ -938,7 +1004,7 @@ a {
 .story__scene .large_net--drifting {
   max-width: 540px;
   width: 18vw;
-  animation: largenetUpDown 5s linear infinite;
+  animation: bobbing_net 6s linear infinite;
   visibility: visible;
 }
 .story__scene .large_net--sideways {
@@ -974,34 +1040,28 @@ a {
 }
 @media (prefers-reduced-motion: no-preference) {
   .story__scene #fish_1 {
-    animation: fish-jump 4s infinite linear;
+    animation: fish-jump 8s infinite linear;
   }
-  .story__scene .splash--big {
-    animation: splash-cycle 4s infinite linear;
+  .story__scene .splash--big#splash_big_left {
+    animation: splash-visibility 8s infinite linear, splash-offset_left 8s infinite linear;
     animation-delay: 0s;
   }
-  .story__scene .splash--small {
-    animation: splash-cycle 4s infinite linear;
-    animation-delay: 1.6s;
+  .story__scene .splash--small#splash_small_left {
+    animation: splash-visibility 8s infinite linear, splash-offset_left 8s infinite linear;
+    animation-delay: 2.4s;
+  }
+  .story__scene .splash--small#splash_small_right {
+    animation: splash-visibility 8s infinite linear, splash-offset_right 8s infinite linear;
+    animation-delay: 2.5s;
+  }
+  .story__scene .splash--rings#splash_rings_right {
+    animation: splash-visibility 8s infinite linear, splash-offset_right 8s infinite linear;
+    animation-delay: 4.9s;
   }
 }
 @media (prefers-reduced-motion: reduce) {
   .story__scene #fish_1 {
-    animation: fish-peek 12s infinite linear;
-  }
-}
-.story__scene .cloud {
-  transform: translateX(-80%);
-}
-.story__scene .cloud--1 {
-  animation: moving-clouds 50s infinite linear;
-  opacity: 90%;
-}
-@media (prefers-reduced-motion: no-preference) {
-  .story__scene .cloud--2 {
-    animation: moving-clouds 60s infinite linear;
-    animation-delay: 10s;
-    opacity: 70%;
+    animation: fish-jump 12s infinite linear;
   }
 }
 .story__scene .story-text.delayed-animation--active {
@@ -1023,6 +1083,11 @@ a {
 }
 .story__scene .bottle_tossed--floating.delayed-animation--active {
   animation: bottle-float 20s infinite linear;
+  animation-delay: 15.5s;
+}
+.story__scene .splash--rings.delayed-animation--active {
+  transform: translate(-11.9vw, 5.3vw) scale(0.4);
+  animation: splash-visibility 14s 1 linear;
   animation-delay: 15.5s;
 }
 .story__scene .fishing-boat_net.delayed-animation--active {
@@ -1057,54 +1122,54 @@ a {
   animation: beerboxDrifting 4s linear infinite;
   z-index: -5;
 }
-.story__scene #bottle_1 {
-  animation: bottleUpDown1 6s linear infinite;
+.story__scene #bottle_1, .story__scene #bottle_3 {
+  animation: plastic_bottle_bob_high 4s linear infinite;
 }
 .story__scene #bottle_2 {
-  animation: bottleUpDown2 8s linear infinite;
+  left: 22vw;
+  animation: plastic_bottle_bob_high_turned 6s linear infinite;
 }
 .story__scene #bottle_3 {
-  animation: bottleUpDown3 6s linear infinite;
-  animation-delay: 1s;
+  left: 48vw;
+  animation-delay: 2.4s;
 }
-.story__scene #bottle_4 {
-  animation: bottleUpDown4 6s linear infinite;
+.story__scene #bottle_4, .story__scene #bottle_6 {
+  animation: plastic_bottle_bob_low 6s linear infinite;
 }
 .story__scene #bottle_5 {
-  animation: bottleUpDown5 5s linear infinite;
+  left: 33vw;
+  animation: plastic_bottle_bob_high_turned 6s linear infinite;
 }
-.story__scene #gray_bottle_1 {
-  animation: greybottleUpDown1 8s linear infinite;
+.story__scene #bottle_6 {
+  left: 39vw;
+}
+.story__scene #gray_bottle_1, .story__scene #gray_bottle_2 {
+  animation: plastic_bottle_bob_low_turned 8s linear infinite;
 }
 .story__scene #gray_bottle_2 {
-  animation: greybottleUpDown2 6s linear infinite;
+  left: 58vw;
+  animation-delay: 1.2s;
 }
 .story__scene #gray_bottle_3 {
-  animation: greybottleUpDown3 7s linear infinite;
+  left: 36vw;
+  animation: plastic_bottle_bob_high_turned 12s linear infinite;
 }
-.story__scene #wine_bottle_dirty_1 {
-  width: 1vw;
-  animation: dirtywine1 7s linear infinite;
-}
-.story__scene #wine_bottle_dirty_2 {
-  width: 1vw;
-  animation: dirtywine2 7s linear infinite;
-}
-.story__scene #wine_1 {
-  width: 1vw;
-  animation: wine1 7s linear infinite;
-}
-.story__scene #wine_2 {
-  width: 1vw;
-  animation: wine2 7s linear infinite;
-}
-.story__scene #dirty_bottle_1 {
-  width: 1vw;
-  animation: wine2 7s linear infinite;
+.story__scene #dirty_bottle_1, .story__scene #dirty_bottle_2 {
+  left: 41vw;
+  animation: plastic_bottle_bob_high 12s linear infinite;
 }
 .story__scene #dirty_bottle_2 {
-  width: 1vw;
-  animation: dirtybottle1 7s linear infinite;
+  left: 65vw;
+  animation-delay: 4s;
+}
+.story__scene #wine_bottle_1, .story__scene #wine_bottle_2, .story__scene #wine_bottle_dirty_1, .story__scene #wine_bottle_dirty_2 {
+  animation: glass_bottle_bob 7s linear infinite;
+}
+.story__scene #wine_bottle_dirty_2 {
+  animation-delay: 1.2s;
+}
+.story__scene #wine_bottle_2, .story__scene #wine_bottle_dirty_2 {
+  animation-delay: 0.8s;
 }
 
 #scene_6 .ocean-window {
@@ -1114,26 +1179,29 @@ a {
 footer {
   padding: 2vw;
 }
-footer section {
+footer .image-section {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-around;
 }
-footer section figure {
+footer .image-section figure {
   margin: 0 auto;
   max-width: 840px;
   width: 21vw;
 }
-footer section figure img {
+footer .image-section figure img {
   margin: inherit;
   display: block;
   max-width: 800px;
   width: 20vw;
 }
+footer .image-section figure img:hover {
+  animation: bounce 0.5s ease;
+}
 footer .sources {
   text-align: center;
-  padding-top: 50px;
+  padding-top: 20px;
 }
 footer .sources ul {
   list-style-type: none;
