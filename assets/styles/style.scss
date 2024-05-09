@@ -31,6 +31,10 @@ a {
 	}
 }
 
+ul, li {
+	padding: 0;
+}
+
 // Colors
 $algaeGreen: rgb(19, 75, 28);
 $lessAlgaeGreen:rgb(33, 139, 143);
@@ -640,61 +644,61 @@ $lessAlgaeGreen:rgb(33, 139, 143);
 @keyframes cleanupMove {
 	0% {
 		overflow: hidden;
-		transform: translate(25vw, 1vw) rotate(2deg);
+		transform: translate(25vw, -7vw) rotate(2deg);
 		visibility: visible;
 		z-index: -9;
 		opacity: 0;
 	}
 	10% {
 		overflow: hidden;
-		transform: translate(10vw, -1vw) rotate(0deg);
+		transform: translate(10vw, -9vw) rotate(0deg);
 		visibility: visible;
 		z-index: -9;
 		opacity: 1;
 	}
 	20% {
-		transform: translate(0vw, -1vw) rotate(2deg);
+		transform: translate(0vw, -9vw) rotate(2deg);
 		visibility: visible;
 		z-index: -9;
 	}
 	30% {
-		transform: translate(-5vw, -1vw) rotate(0deg);
+		transform: translate(-5vw, -9vw) rotate(0deg);
 		visibility: visible;
 		z-index: -9;
 	}
 	40% {
-		transform: translate(-10vw, -1vw) rotate(2deg);
+		transform: translate(-10vw, -9vw) rotate(2deg);
 		visibility: visible;
 		z-index: -9;
 	}
 	50% {
-		transform: translate(-10vw, -1vw) rotate(0deg);
+		transform: translate(-10vw, -9vw) rotate(0deg);
 		visibility: visible;
 		z-index: -9;
 	}
 	60% {
-		transform: translate(-10vw, -1vw) rotate(2deg);
+		transform: translate(-10vw, -9vw) rotate(2deg);
 		visibility: visible;
 		z-index: -9;
 	}
 	70% {
-		transform: translate(-10vw, -1vw) rotate(0deg);
+		transform: translate(-10vw, -9vw) rotate(0deg);
 		visibility: visible;
 		z-index: -9;
 	}
 	80% {
-		transform: translate(-10vw, -1vw) rotate(2deg);
+		transform: translate(-10vw, -9vw) rotate(2deg);
 		visibility: visible;
 		z-index: -9;
 	}
 	90% {
-		transform: translate(-10vw, -1vw) rotate(0deg);
+		transform: translate(-10vw, -9vw) rotate(0deg);
 		visibility: visible;
 		z-index: -9;
 		overflow: hidden;
 	}
 	100% {
-		transform: translate(-10vw, -1vw) rotate(2deg);
+		transform: translate(-10vw, -9vw) rotate(2deg);
 		visibility: visible;
 		z-index: -9;
 		overflow: hidden;
@@ -703,67 +707,67 @@ $lessAlgaeGreen:rgb(33, 139, 143);
 
 @keyframes cleanupStill {
 	0% {
-		transform: translate(-10vw, -1vw) rotate(2deg);
+		transform: translate(-10vw, -9vw) rotate(2deg);
 		visibility: visible;
 		z-index: -9;
 		overflow: hidden;
 	}
 	10% {
-		transform: translate(-10vw, -1vw) rotate(0deg);
+		transform: translate(-10vw, -9vw) rotate(0deg);
 		visibility: visible;
 		z-index: -9;
 		overflow: hidden;
 	}
 	20% {
-		transform: translate(-10vw, -1vw) rotate(2deg);
+		transform: translate(-10vw, -9vw) rotate(2deg);
 		visibility: visible;
 		z-index: -9;
 		overflow: hidden;
 	}
 	30% {
-		transform: translate(-10vw, -1vw) rotate(0deg);
+		transform: translate(-10vw, -9vw) rotate(0deg);
 		visibility: visible;
 		z-index: -9;
 		overflow: hidden;
 	}
 	40% {
-		transform: translate(-10vw, -1vw) rotate(2deg);
+		transform: translate(-10vw, -9vw) rotate(2deg);
 		visibility: visible;
 		z-index: -9;
 		overflow: hidden;
 	}
 	50% {
-		transform: translate(-10vw, -1vw) rotate(0deg);
+		transform: translate(-10vw, -9vw) rotate(0deg);
 		visibility: visible;
 		z-index: -9;
 		overflow: hidden;
 	}
 	60% {
-		transform: translate(-10vw, -1vw) rotate(2deg);
+		transform: translate(-10vw, -9vw) rotate(2deg);
 		visibility: visible;
 		z-index: -9;
 		overflow: hidden;
 	}
 	70% {
-		transform: translate(-10vw, -1vw) rotate(0deg);
+		transform: translate(-10vw, -9vw) rotate(0deg);
 		visibility: visible;
 		z-index: -9;
 		overflow: hidden;
 	}
 	80% {
-		transform: translate(-10vw, -1vw) rotate(2deg);
+		transform: translate(-10vw, -9vw) rotate(2deg);
 		visibility: visible;
 		z-index: -9;
 		overflow: hidden;
 	}
 	90% {
-		transform: translate(-10vw, -1vw) rotate(0deg);
+		transform: translate(-10vw, -9vw) rotate(0deg);
 		visibility: visible;
 		z-index: -9;
 		overflow: hidden;
 	}
 	100% {
-		transform: translate(-10vw, -1vw) rotate(2deg);
+		transform: translate(-10vw, -9vw) rotate(2deg);
 		visibility: visible;
 		z-index: -9;
 		overflow: hidden;
@@ -1131,14 +1135,14 @@ $lessAlgaeGreen:rgb(33, 139, 143);
 			animation-delay: 17.5s;
 		}
 
-		.cleanup_boat_1.delayed-animation--active {
+		.cleanup_boat--moving.delayed-animation--active {
 			animation: cleanupMove 20s 1 linear;
 			animation-delay: 2s;
 		}
 
-		.cleanup_boat_2.delayed-animation--active {
+		.cleanup_boat--still.delayed-animation--active {
 			animation: cleanupStill 20s infinite linear;
-			animation-delay: 18s;
+			animation-delay: 22s;
 		}
 
 		// Always active animations
@@ -1246,7 +1250,7 @@ footer {
 		}
 	}
 
-	.sources {
+	.credits-section {
 		text-align: center;
 		padding-top: 20px;
 
@@ -1254,6 +1258,19 @@ footer {
 			list-style-type: none;
 			text-align: center;
 			line-height: 1.8;
+			padding-bottom: 20px;
+		}
+
+		&__credits {
+			border: 2px solid gray;
+			border-radius: 10px;
+
+			ul {
+				margin: 0 auto;
+				max-width: 1800px;
+				width: 60vw;
+				text-align: left;
+			}
 		}
 	}
 }
