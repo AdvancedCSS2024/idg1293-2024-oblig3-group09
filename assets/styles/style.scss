@@ -811,9 +811,33 @@ $algaeGreen: rgb(19, 75, 28);
 			animation-delay: 17.5s;
 		}
 
+		.vector-illustration-empty_bottle_colored {
+			max-width: 30px;
+			width: 1vw;
+			transition: opacity 0.5s ease;
+		}
+
 		.empty_bottle_colored {
 			max-width: 30px;
 			width: 1vw;
+		}
+
+		.vector-illustration-grey_bottle {
+			max-width: 30px;
+			width: 1vw;
+			transition: opacity 0.5s ease;
+		}
+
+		.vector-illustration-dirtywine {
+			max-width: 30px;
+			width: 1vw;
+			transition: opacity 0.5s ease;
+		}
+
+		.vector-illustration-dirty_bottle {
+			max-width: 30px;
+			width: 1vw;
+			transition: opacity 0.5s ease;
 		}
 
 		.waste_plastic {
@@ -830,6 +854,10 @@ $algaeGreen: rgb(19, 75, 28);
 			animation: bottleDrifting 6s linear infinite;
 			z-index: -5;
 		}
+
+		.hidden {
+			opacity: 0; /* Hidden when opacity is set to 0 */
+		  }
 
 		#bottle_1 {
 			animation: bottleUpDown1 6s linear infinite;

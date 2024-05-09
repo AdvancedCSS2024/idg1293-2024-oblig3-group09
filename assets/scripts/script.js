@@ -62,3 +62,28 @@ function handleScroll() {
 // Initial functions to run
 handleScroll();
 sectionEls.forEach(el=>observer.observe(el));
+
+
+document.querySelectorAll(".vector-illustration-empty_bottle_colored").forEach(function(img) {
+	img.addEventListener("click", function() {
+	  this.classList.add("hidden");
+	});
+  });
+
+document.querySelectorAll(".vector-illustration-grey_bottle").forEach(function(img) {
+	img.addEventListener("click", function() {
+	  this.classList.add("hidden");
+	});
+  });
+
+document.querySelectorAll(".vector-illustration-dirty_bottle").forEach(function(img) {
+	img.addEventListener("click", function() {
+	  this.classList.add("hidden");
+	});
+  });
+
+document.querySelectorAll(".vector-illustration-dirtywine").forEach(function(img) {
+	img.addEventListener("click", function() {
+	  this.classList.add("hidden");
+	});
+  });

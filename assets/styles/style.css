@@ -835,9 +835,29 @@ body {
   animation: net-float 20s 1 linear;
   animation-delay: 17.5s;
 }
+.story__scene .vector-illustration-empty_bottle_colored {
+  max-width: 30px;
+  width: 1vw;
+  transition: opacity 0.5s ease;
+}
 .story__scene .empty_bottle_colored {
   max-width: 30px;
   width: 1vw;
+}
+.story__scene .vector-illustration-grey_bottle {
+  max-width: 30px;
+  width: 1vw;
+  transition: opacity 0.5s ease;
+}
+.story__scene .vector-illustration-dirtywine {
+  max-width: 30px;
+  width: 1vw;
+  transition: opacity 0.5s ease;
+}
+.story__scene .vector-illustration-dirty_bottle {
+  max-width: 30px;
+  width: 1vw;
+  transition: opacity 0.5s ease;
 }
 .story__scene .waste_plastic {
   max-width: 75px;
@@ -850,6 +870,9 @@ body {
 .story__scene #bottle_initial {
   animation: bottleDrifting 6s linear infinite;
   z-index: -5;
+}
+.story__scene .hidden {
+  opacity: 0; /* Hidden when opacity is set to 0 */
 }
 .story__scene #bottle_1 {
   animation: bottleUpDown1 6s linear infinite;
