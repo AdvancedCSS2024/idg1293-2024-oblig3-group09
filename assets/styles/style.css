@@ -740,6 +740,19 @@ body {
   visibility: hidden;
   z-index: -7;
 }
+.story__scene .cleanup_boat {
+  overflow: hidden;
+  max-width: 1620px;
+  width: 54vw;
+  z-index: -7;
+  animation: boating 20s 1 linear;
+  animation-delay: 2.5s;
+}
+.story__scene .motorboat--still.delayed-animation--active {
+  transform: scaleX(-1);
+  animation: boating-still 20s infinite linear;
+  animation-delay: 12.5s;
+}
 .story__scene .large_net {
   overflow: hidden;
   max-width: 495px;
@@ -965,4 +978,66 @@ footer section figure img {
 .hidden-all {
   opacity: 0;
   filter: blur(15px);
+}
+
+@keyframes cleanupMove {
+  0% {
+    overflow: hidden;
+    transform: translate(10vw, 4vw) rotate(1deg);
+    visibility: visible;
+    z-index: -9;
+  }
+  10% {
+    overflow: hidden;
+    transform: translate(5vw, 2vw) rotate(0deg);
+    visibility: visible;
+    z-index: -9;
+  }
+  20% {
+    transform: translate(0vw, 2vw) rotate(1deg);
+    visibility: visible;
+    z-index: -9;
+  }
+  30% {
+    transform: translate(0vw, 2vw) rotate(0deg);
+    visibility: visible;
+    z-index: -9;
+  }
+  40% {
+    transform: translate(-1vw, 2vw) rotate(1deg);
+    visibility: visible;
+    z-index: -9;
+  }
+  50% {
+    transform: translate(-2vw, 2vw) rotate(0deg);
+    visibility: visible;
+    z-index: -9;
+  }
+  60% {
+    transform: translate(-3vw, -1vw) rotate(1deg);
+    visibility: visible;
+    z-index: -9;
+  }
+  70% {
+    transform: translate(-2vw, 2vw) rotate(0deg);
+    visibility: visible;
+    z-index: -9;
+  }
+  80% {
+    transform: translate(-1vw, -2vw) rotate(1deg);
+    visibility: visible;
+    z-index: -9;
+  }
+  90% {
+    transform: translate(0vw, 2vw) rotate(0deg);
+    visibility: visible;
+    z-index: -9;
+    overflow: hidden;
+  }
+  100% {
+    transform: translate(1vw, -2vw) rotate(-1deg);
+    visibility: visible;
+    z-index: -9;
+    overflow: hidden;
+  }
 }/*# sourceMappingURL=style.css.map */
