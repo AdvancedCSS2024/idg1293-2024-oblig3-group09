@@ -720,15 +720,15 @@ $algaeGreen: rgb(19, 75, 28);
 
 		@keyframes oceanMove {
 			0% {
-				transform: translateY(11vw) rotate(6deg);
+				transform: translateY(11vw) rotate(5deg);
 				z-index: -5;
 			}
 			50% {
-				transform: translateY(11.5vw) rotate(-6deg);
+				transform: translateY(11.5vw) rotate(-5deg);
 				z-index: -5;
 			}
 			100% {
-				transform: translateY(11vw) rotate(6deg);
+				transform: translateY(11vw) rotate(5deg);
 				z-index: -5;
 			}
 		}
