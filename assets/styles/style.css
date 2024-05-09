@@ -23,6 +23,10 @@ p {
   width: 60vw;
 }
 
+a {
+  color: blue;
+}
+
 @keyframes text_fade-in {
   0% {
     opacity: 0%;
@@ -700,59 +704,61 @@ p {
 @keyframes cleanupMove {
   0% {
     overflow: hidden;
-    transform: translate(36vw, 4vw) rotate(2deg);
+    transform: translate(25vw, 1vw) rotate(2deg);
     visibility: visible;
     z-index: -9;
+    opacity: 0;
   }
   10% {
     overflow: hidden;
-    transform: translate(20vw, 2vw) rotate(0deg);
+    transform: translate(10vw, -1vw) rotate(0deg);
     visibility: visible;
     z-index: -9;
+    opacity: 1;
   }
   20% {
-    transform: translate(0vw, 2vw) rotate(2deg);
+    transform: translate(0vw, -1vw) rotate(2deg);
     visibility: visible;
     z-index: -9;
   }
   30% {
-    transform: translate(-8vw, 3vw) rotate(0deg);
+    transform: translate(-5vw, -1vw) rotate(0deg);
     visibility: visible;
     z-index: -9;
   }
   40% {
-    transform: translate(-16vw, 4vw) rotate(2deg);
+    transform: translate(-10vw, -1vw) rotate(2deg);
     visibility: visible;
     z-index: -9;
   }
   50% {
-    transform: translate(-16vw, 4vw) rotate(0deg);
+    transform: translate(-10vw, -1vw) rotate(0deg);
     visibility: visible;
     z-index: -9;
   }
   60% {
-    transform: translate(-16vw, 5vw) rotate(2deg);
+    transform: translate(-10vw, -1vw) rotate(2deg);
     visibility: visible;
     z-index: -9;
   }
   70% {
-    transform: translate(-16vw, 5vw) rotate(0deg);
+    transform: translate(-10vw, -1vw) rotate(0deg);
     visibility: visible;
     z-index: -9;
   }
   80% {
-    transform: translate(-16vw, 5vw) rotate(2deg);
+    transform: translate(-10vw, -1vw) rotate(2deg);
     visibility: visible;
     z-index: -9;
   }
   90% {
-    transform: translate(-16vw, 5vw) rotate(0deg);
+    transform: translate(-10vw, -1vw) rotate(0deg);
     visibility: visible;
     z-index: -9;
     overflow: hidden;
   }
   100% {
-    transform: translate(-16vw, 5vw) rotate(2deg);
+    transform: translate(-10vw, -1vw) rotate(2deg);
     visibility: visible;
     z-index: -9;
     overflow: hidden;
@@ -760,67 +766,67 @@ p {
 }
 @keyframes cleanupStill {
   0% {
-    transform: translate(-16vw, 5vw) rotate(2deg);
+    transform: translate(-10vw, -1vw) rotate(2deg);
     visibility: visible;
     z-index: -9;
     overflow: hidden;
   }
   10% {
-    transform: translate(-16vw, 5vw) rotate(0deg);
+    transform: translate(-10vw, -1vw) rotate(0deg);
     visibility: visible;
     z-index: -9;
     overflow: hidden;
   }
   20% {
-    transform: translate(-16vw, 5vw) rotate(2deg);
+    transform: translate(-10vw, -1vw) rotate(2deg);
     visibility: visible;
     z-index: -9;
     overflow: hidden;
   }
   30% {
-    transform: translate(-16vw, 5vw) rotate(0deg);
+    transform: translate(-10vw, -1vw) rotate(0deg);
     visibility: visible;
     z-index: -9;
     overflow: hidden;
   }
   40% {
-    transform: translate(-16vw, 5vw) rotate(2deg);
+    transform: translate(-10vw, -1vw) rotate(2deg);
     visibility: visible;
     z-index: -9;
     overflow: hidden;
   }
   50% {
-    transform: translate(-16vw, 5vw) rotate(0deg);
+    transform: translate(-10vw, -1vw) rotate(0deg);
     visibility: visible;
     z-index: -9;
     overflow: hidden;
   }
   60% {
-    transform: translate(-16vw, 5vw) rotate(2deg);
+    transform: translate(-10vw, -1vw) rotate(2deg);
     visibility: visible;
     z-index: -9;
     overflow: hidden;
   }
   70% {
-    transform: translate(-16vw, 5vw) rotate(0deg);
+    transform: translate(-10vw, -1vw) rotate(0deg);
     visibility: visible;
     z-index: -9;
     overflow: hidden;
   }
   80% {
-    transform: translate(-16vw, 5vw) rotate(2deg);
+    transform: translate(-10vw, -1vw) rotate(2deg);
     visibility: visible;
     z-index: -9;
     overflow: hidden;
   }
   90% {
-    transform: translate(-16vw, 5vw) rotate(0deg);
+    transform: translate(-10vw, -1vw) rotate(0deg);
     visibility: visible;
     z-index: -9;
     overflow: hidden;
   }
   100% {
-    transform: translate(-16vw, 5vw) rotate(2deg);
+    transform: translate(-10vw, -1vw) rotate(2deg);
     visibility: visible;
     z-index: -9;
     overflow: hidden;
@@ -921,17 +927,6 @@ p {
   width: 54vw;
   visibility: hidden;
   z-index: -7;
-  animation: cleanupMove 20s 1 linear;
-  animation-delay: 2s;
-}
-.story__scene .cleanup_boat_2 {
-  overflow: hidden;
-  max-width: 1620px;
-  width: 54vw;
-  visibility: hidden;
-  z-index: -7;
-  animation: cleanupStill 20s infinite linear;
-  animation-delay: 18s;
 }
 .story__scene .large_net {
   overflow: hidden;
@@ -1042,13 +1037,13 @@ p {
   animation: floating_net 20s 1 linear;
   animation-delay: 17.5s;
 }
-.story__scene .cleanup_boat {
-  overflow: hidden;
-  max-width: 1620px;
-  width: 54vw;
-  z-index: -7;
-  animation: boating 20s 1 linear;
-  animation-delay: 2.5s;
+.story__scene .cleanup_boat_1.delayed-animation--active {
+  animation: cleanupMove 20s 1 linear;
+  animation-delay: 2s;
+}
+.story__scene .cleanup_boat_2.delayed-animation--active {
+  animation: cleanupStill 20s infinite linear;
+  animation-delay: 18s;
 }
 .story__scene #empty_bottle_drifting {
   animation: bottleDrifting 6s linear infinite;
@@ -1135,6 +1130,15 @@ footer section figure img {
   display: block;
   max-width: 800px;
   width: 20vw;
+}
+footer .sources {
+  text-align: center;
+  padding-top: 50px;
+}
+footer .sources ul {
+  list-style-type: none;
+  text-align: center;
+  line-height: 1.8;
 }
 
 .hidden-opacity {
