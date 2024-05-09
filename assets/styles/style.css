@@ -23,6 +23,10 @@ p {
   width: 60vw;
 }
 
+a {
+  color: blue;
+}
+
 @keyframes text_fade-in {
   0% {
     opacity: 0%;
@@ -1126,6 +1130,15 @@ footer section figure img {
   display: block;
   max-width: 800px;
   width: 20vw;
+}
+footer .sources {
+  text-align: center;
+  padding-top: 50px;
+}
+footer .sources ul {
+  list-style-type: none;
+  text-align: center;
+  line-height: 1.8;
 }
 
 .hidden-opacity {
