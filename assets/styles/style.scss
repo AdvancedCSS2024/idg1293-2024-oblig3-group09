@@ -31,6 +31,10 @@ a {
 	}
 }
 
+ul, li {
+	padding: 0;
+}
+
 // Colors
 $algaeGreen: rgb(19, 75, 28);
 $lessAlgaeGreen:rgb(33, 139, 143);
@@ -1254,6 +1258,7 @@ footer {
 			list-style-type: none;
 			text-align: center;
 			line-height: 1.8;
+			padding-bottom: 20px;
 		}
 
 		&__credits {
@@ -1265,11 +1270,6 @@ footer {
 				max-width: 1800px;
 				width: 60vw;
 				text-align: left;
-				padding-bottom: 20px;
-
-				li {
-					padding: 0;
-				}
 			}
 		}
 	}

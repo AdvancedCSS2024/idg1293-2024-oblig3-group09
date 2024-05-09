@@ -30,6 +30,10 @@ a:hover {
   background-color: white;
 }
 
+ul, li {
+  padding: 0;
+}
+
 @keyframes text_fade-in {
   0% {
     opacity: 0%;
@@ -1207,6 +1211,7 @@ footer .credits-section ul {
   list-style-type: none;
   text-align: center;
   line-height: 1.8;
+  padding-bottom: 20px;
 }
 footer .credits-section__credits {
   border: 2px solid gray;
@@ -1217,10 +1222,6 @@ footer .credits-section__credits ul {
   max-width: 1800px;
   width: 60vw;
   text-align: left;
-  padding-bottom: 20px;
-}
-footer .credits-section__credits ul li {
-  padding: 0;
 }
 
 .hidden-opacity {
