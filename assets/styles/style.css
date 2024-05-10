@@ -914,6 +914,10 @@ ul, li {
     animation: moving_clouds_path_1 100s infinite linear;
     opacity: 90%;
   }
+  .story__scene .ocean-window .cloud--type_b#cloud_b3, .story__scene .ocean-window .cloud--type_b#cloud_b7 {
+    transform: translate(5vw, 0.5vw);
+    opacity: 100%;
+  }
   .story__scene .ocean-window .cloud--type_gray_a#cloud_gray_a6 {
     animation: moving_clouds_path_1 80s infinite linear;
     opacity: 92%;

@@ -875,6 +875,11 @@ $lessAlgaeGreen:rgb(33, 139, 143);
 						opacity: 90%;
 					}
 
+					&--type_b#cloud_b3, &--type_b#cloud_b7 {
+						transform: translate(5vw, 0.5vw);
+						opacity: 100%;
+					}
+
 					&--type_gray_a#cloud_gray_a6 {
 						animation: moving_clouds_path_1 80s infinite linear;
 						opacity: 92%;
