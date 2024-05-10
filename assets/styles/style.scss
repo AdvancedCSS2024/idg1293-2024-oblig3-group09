@@ -1,0 +1,1302 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0 auto;
+    text-align: center;
+	background-color: antiquewhite;
+	color: rgb(68, 67, 67);
+	font-size: 1.6vw;
+}
+
+h1, h2, h3, h4, h5, h6, p, figcaption {
+	margin: 0 auto;
+	padding: 10px;
+	text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	max-width: 1600px;
+	width: 80vw;
+}
+
+p {
+	max-width: 1200px;
+	width: 60vw;
+}
+
+a {
+	color:blue;
+
+	&:hover {
+		background-color: white;
+	}
+}
+
+ul, li {
+	padding: 0;
+}
+
+// Colors
+$algaeGreen: rgb(19, 75, 28);
+$lessAlgaeGreen:rgb(33, 139, 143);
+
+// Keyframe animations
+@keyframes text_fade-in {
+	0% {
+		opacity: 0%;
+	}
+
+	25% { opacity: 25%; }
+
+	50% { opacity: 50%; }
+
+	75% { opacity: 75%; }
+
+	100% { opacity: 100%; }
+}
+
+@keyframes sunshine {
+	0% { filter: brightness(100%); }
+
+	25% {
+		filter: brightness(90%);
+	}
+
+	50% { filter: brightness(100%); }
+
+	75% {
+		filter: brightness(110%);
+	}
+
+	100% { filter: brightness(100%); }
+}
+
+@keyframes intense_sunshine {
+	0% { filter: brightness(100%); }
+
+	25% {
+		filter: brightness(90%);
+		transform: translate(-2.9vw, -0.25vw) scale(1.05);
+	}
+
+	50% { filter: brightness(100%); }
+
+	75% {
+		filter: brightness(110%);
+		transform: translate(-2.9vw, -0.25vw) scale(1.05);
+	}
+
+	100% { filter: brightness(100%); }
+}
+
+@keyframes moving_clouds_path_1 {
+	0% {transform: translate(-35vw, 3vw);}
+	20% {transform: translate(-10vw, 3vw);}
+	40% {transform: translate(15vw, 3vw);}
+	60% {transform: translate(40vw, 3vw);}
+	80% {transform: translate(65vw, 3vw);}
+	100% {transform: translate(90vw, 3vw);}
+}
+
+@keyframes moving_clouds_path_2 {
+	0% {transform: translate(-35vw, 5vw);}
+	20% {transform: translate(-10vw, 5vw);}
+	40% {transform: translate(15vw, 5vw);}
+	60% {transform: translate(40vw, 5vw);}
+	80% {transform: translate(65vw, 5vw);}
+	100% {transform: translate(90vw, 5vw);}
+}
+
+@keyframes offset-down {
+	0% { transform: translateY(4vw); }
+	50% { transform: translateY(4vw); }
+	100% { transform: translateY(4vw); }
+}
+
+@keyframes offset-up {
+	0% { transform: translateY(-4vw); }
+	50% { transform: translateY(-4vw); }
+	100% { transform: translateY(-4vw); }
+}
+
+@keyframes fish-jump {
+	0% {
+		transform: scalex(-1) translate(0, 5vw) rotate(45deg);
+	}
+	5% {
+		transform: scalex(-1) translate(-4vw, 1vw) rotate(30deg);
+	}
+	10% {
+		transform: scalex(-1) translate(-8vw, -2vw) rotate(15deg);
+	}
+	15% {
+		transform: scalex(-1) translate(-12vw, -4vw) rotate(0deg);
+	}
+	20% {
+		transform: scalex(-1) translate(-16vw, -2vw) rotate(-15deg);
+	}
+	25% {
+		transform: scalex(-1) translate(-20vw, 1vw) rotate(-30deg);
+	}
+	30% {
+		transform: scalex(-1) translate(-24vw, 5vw) rotate(-45deg);
+		visibility: hidden;
+	}
+	100% {
+		transform: scalex(-1) translate(0, 22vw) rotate(45deg);
+		visibility: hidden;
+	}
+}
+
+@keyframes fish-peek {
+	0% {
+		transform: scalex(-1) translate(2vw, 5vw) rotate(30deg);
+		z-index: -9;
+	}
+	25% {
+		transform: scalex(-1) translate(2.2vw, 6vw) rotate(32deg);
+		z-index: -9;
+	}
+	50% {
+		transform: scalex(-1) translate(2.2vw, 5vw) rotate(30deg);
+		z-index: -9;
+	}
+	75% {
+		transform: scalex(-1) translate(2.2vw, 6vw) rotate(28deg);
+		z-index: -9;
+	}
+	100% {
+		transform: scalex(-1) translate(2vw, 5vw) rotate(30deg);
+		z-index: -9;
+		visibility: hidden;
+	}
+}
+
+@keyframes splash-visibility {
+	0% { visibility: hidden; }
+	10% { visibility: visible; }
+	15% {
+		visibility: visible;
+		opacity: 80%;
+	}
+	20% {
+		visibility: visible;
+		opacity: 60%;
+	}
+	30% { visibility: hidden; }
+	100% { visibility: hidden; }
+}
+
+@keyframes splash-offset_left {
+	0% {
+		transform: translate(-3vw, 8vw) scale(1);
+	}
+	10% {
+		transform: translate(-3vw, 8vw) scale(1);
+	}
+	20% {
+		transform: translate(-3vw, 8vw) scale(1.1);
+	}
+	40% {
+		transform: translate(-3vw, 8vw) scale(1);
+	}
+	60% {
+		transform: translate(-3vw, 8vw) scale(1.1);
+	}
+	80% {
+		transform: translate(-3vw, 8vw) scale(1.1);
+	}
+	100% {
+		transform: translate(-3vw, 8vw) scale(1);
+	}
+}
+
+@keyframes splash-offset_right {
+	0% {
+		transform: translate(27vw, 8vw) scale(1);
+	}
+	10% {
+		transform: translate(27vw, 8vw) scale(1);
+	}
+	20% {
+		transform: translate(27vw, 8vw) scale(1.1);
+	}
+	40% {
+		transform: translate(27vw, 8vw) scale(1);
+	}
+	60% {
+		transform: translate(27vw, 8vw) scale(1.1);
+	}
+	80% {
+		transform: translate(27vw, 8vw) scale(1.1);
+	}
+	100% {
+		transform: translate(27vw, 8vw) scale(1);
+	}
+}
+
+@keyframes boating {
+	0% {
+		overflow: hidden;
+		transform: translate(36vw, -2vw) rotate(4deg);
+		visibility: visible;
+		z-index: -9;
+	}
+	10% {
+		overflow: hidden;
+		transform: translate(20vw, -4vw) rotate(0deg);
+		visibility: visible;
+		z-index: -9;
+	}
+	20% {
+		transform: translate(0vw, -4vw) rotate(-4deg);
+		visibility: visible;
+		z-index: -9;
+	}
+	30% {
+		transform: translate(-8vw, -3vw) rotate(0deg);
+		visibility: visible;
+		z-index: -9;
+	}
+	40% {
+		transform: translate(-16vw, -2vw) rotate(4deg);
+		visibility: visible;
+		z-index: -9;
+	}
+	50% {
+		transform: translate(-20vw, -2vw) rotate(0deg);
+		visibility: visible;
+		z-index: -9;
+	}
+	60% {
+		transform: translate(-24vw, -1vw) rotate(-4deg);
+		visibility: visible;
+		z-index: -9;
+	}
+	70% {
+		transform: translate(-24vw, -1vw) rotate(0deg);
+		visibility: visible;
+		z-index: -9;
+	}
+	80% {
+		transform: translate(-24vw, -1vw) rotate(4deg);
+		visibility: visible;
+		z-index: -9;
+	}
+	90% {
+		transform: translate(-24vw, -1vw) rotate(0deg);
+		visibility: visible;
+		z-index: -9;
+		overflow: hidden;
+	}
+	100% {
+		transform: translate(-24vw, -1vw) rotate(-3deg);
+		visibility: visible;
+		z-index: -9;
+		overflow: hidden;
+	}
+}
+
+@keyframes boating-still {
+	0% {
+		transform: translate(-24vw, -1vw) rotate(-3deg);
+		visibility: visible;
+		z-index: -9;
+		overflow: hidden;
+	}
+	10% {
+		transform: translate(-24vw, -1vw) rotate(3deg);
+		visibility: visible;
+		z-index: -9;
+		overflow: hidden;
+	}
+	20% {
+		transform: translate(-24vw, -1vw) rotate(-3deg);
+		visibility: visible;
+		z-index: -9;
+		overflow: hidden;
+	}
+	30% {
+		transform: translate(-24vw, -1vw) rotate(3deg);
+		visibility: visible;
+		z-index: -9;
+		overflow: hidden;
+	}
+	40% {
+		transform: translate(-24vw, -1vw) rotate(-3deg);
+		visibility: visible;
+		z-index: -9;
+		overflow: hidden;
+	}
+	50% {
+		transform: translate(-24vw, -1vw) rotate(3deg);
+		visibility: visible;
+		z-index: -9;
+		overflow: hidden;
+	}
+	60% {
+		transform: translate(-24vw, -1vw) rotate(-3deg);
+		visibility: visible;
+		z-index: -9;
+		overflow: hidden;
+	}
+	70% {
+		transform: translate(-24vw, -1vw) rotate(3deg);
+		visibility: visible;
+		z-index: -9;
+		overflow: hidden;
+	}
+	80% {
+		transform: translate(-24vw, -1vw) rotate(-3deg);
+		visibility: visible;
+		z-index: -9;
+		overflow: hidden;
+	}
+	90% {
+		transform: translate(-24vw, -1vw) rotate(3deg);
+		visibility: visible;
+		z-index: -9;
+		overflow: hidden;
+	}
+	100% {
+		transform: translate(-24vw, -1vw) rotate(-3deg);
+		visibility: visible;
+		z-index: -9;
+		overflow: hidden;
+	}
+}
+
+@keyframes fishing-still {
+	0% {
+		transform: translate(-24vw, -1vw) rotate(-3deg) scaleX(-1);
+		visibility: visible;
+		z-index: -9;
+		overflow: hidden;
+	}
+	10% {
+		transform: translate(-24vw, -1vw) rotate(3deg) scaleX(-1);
+		visibility: visible;
+		z-index: -9;
+		overflow: hidden;
+	}
+	20% {
+		transform: translate(-24vw, -1vw) rotate(-3deg) scaleX(-1);
+		visibility: visible;
+		z-index: -9;
+		overflow: hidden;
+	}
+	30% {
+		transform: translate(-24vw, -1vw) rotate(3deg) scaleX(-1);
+		visibility: visible;
+		z-index: -9;
+		overflow: hidden;
+	}
+	40% {
+		transform: translate(-24vw, -1vw) rotate(-3deg) scaleX(-1);
+		visibility: visible;
+		z-index: -9;
+		overflow: hidden;
+	}
+	50% {
+		transform: translate(-24vw, -1vw) rotate(3deg) scaleX(-1);
+		visibility: visible;
+		z-index: -9;
+		overflow: hidden;
+	}
+	60% {
+		transform: translate(-24vw, -1vw) rotate(-3deg) scaleX(-1);
+		visibility: visible;
+		z-index: -9;
+		overflow: hidden;
+	}
+	70% {
+		transform: translate(-24vw, -1vw) rotate(3deg) scaleX(-1);
+		visibility: visible;
+		z-index: -9;
+		overflow: hidden;
+	}
+	80% {
+		transform: translate(-24vw, -1vw) rotate(-3deg) scaleX(-1);
+		visibility: visible;
+		z-index: -9;
+		overflow: hidden;
+	}
+	90% {
+		transform: translate(-24vw, -1vw) rotate(3deg) scaleX(-1);
+		visibility: visible;
+		z-index: -9;
+		overflow: hidden;
+	}
+	100% {
+		transform: translate(-24vw, -1vw) rotate(-3deg) scaleX(-1);
+		visibility: visible;
+		z-index: -9;
+		overflow: hidden;
+	}
+}
+
+@keyframes floating_net {
+	0% {
+		transform: translate(-27vw, 3vw) rotate(-3deg);
+		visibility: visible;
+		z-index: 1;
+		overflow: hidden;
+	}
+	25% {
+		transform: translate(-15vw, 3.5vw) rotate(3deg);
+		visibility: visible;
+		z-index: 1;
+		overflow: hidden;
+	}
+	50% {
+		transform: translate(-3vw, 4vw) rotate(-3deg);
+		visibility: visible;
+		z-index: 1;
+		overflow: hidden;
+	}
+	75% {
+		transform: translate(9vw, 4.5vw) rotate(-3deg);
+		visibility: visible;
+		z-index: 1;
+		overflow: hidden;
+	}
+	100% {
+		transform: translate(21vw, 5vw) rotate(-3deg);
+		visibility: hidden;
+		z-index: 1;
+		overflow: hidden;
+	}
+}
+
+@keyframes bobbing_net {
+    0% { transform: translateY(8vw); }
+    50% { transform: translateY(7vw); }
+    100% { transform: translateY(8vw); }
+}
+
+@keyframes drifting_turned_net {
+	0% { transform: translateX(-4vw) translateY(4.5vw) rotate(-45deg); }
+    50% { transform: translatex(-4vw) translateY(3.5vw) rotate(-40deg); }
+    100% { transform: translatex(-4vw) translateY(4.5vw) rotate(-45deg); }
+}
+
+@keyframes bottle-toss {
+	0% {
+		transform: translate(-22vw, -3vw) rotate(30deg);
+		visibility: visible;
+		z-index: -6;
+		overflow: hidden;
+	}
+	20% {
+		transform: translate(-20vw, -5vw) rotate(60deg);
+		visibility: visible;
+		z-index: -6;
+		overflow: hidden;
+	}
+	40% {
+		transform: translate(-18vw, -3vw) rotate(90deg);
+		visibility: visible;
+		z-index: 2;
+		overflow: hidden;
+	}
+	60% {
+		transform: translate(-16vw, -1vw) rotate(120deg);
+		visibility: visible;
+		z-index: 2;
+		overflow: hidden;
+	}
+	80% {
+		transform: translate(-14vw, 2vw) rotate(150deg);
+		visibility: visible;
+		z-index: 2;
+		overflow: hidden;
+	}
+	100% {
+		transform: translate(-12vw, 5vw) rotate(180deg);
+		visibility: visible;
+		z-index: 2;
+		overflow: hidden;
+	}
+}
+
+@keyframes bottle-float {
+	0% {
+		transform: translate(-12vw, 5vw) rotate(180deg);
+		visibility: visible;
+		z-index: 2;
+		overflow: hidden;
+	}
+	25% {
+		transform: translate(-10vw, 3vw) rotate(174deg);
+		visibility: visible;
+		z-index: 2;
+		overflow: hidden;
+	}
+	50% {
+		transform: translate(-12vw, 1vw) rotate(168deg);
+		visibility: visible;
+		z-index: 2;
+		overflow: hidden;
+	}
+	75% {
+		transform: translate(-10vw, 3vw) rotate(174deg);
+		visibility: visible;
+		z-index: 2;
+		overflow: hidden;
+	}
+	100% {
+		transform: translate(-12vw, 5vw) rotate(180deg);
+		visibility: visible;
+		z-index: 2;
+		overflow: hidden;
+	}
+}
+
+@keyframes oceanMove {
+	0% {
+		transform: translateY(6vw) rotate(5deg);
+		z-index: -5;
+	}
+	50% {
+		transform: translateY(6.5vw) rotate(-5deg);
+		z-index: -5;
+	}
+	100% {
+		transform: translateY(6vw) rotate(5deg);
+		z-index: -5;
+	}
+}
+
+@keyframes bottleDrifting {
+	0% {
+		transform: translateY(3vw) rotate(45deg);
+		z-index: -5;
+	}
+    50% {
+		transform: translateY(3.5vw) rotate(50deg);
+		z-index: -5;
+	}
+    100% {
+		transform: translateY(3vw) rotate(45deg);
+		z-index: -5;
+	}
+}
+
+@keyframes plasticDrifting {
+	0% {
+		transform: translateX(11vw) translateY(3.5vw) rotate(65deg);
+		z-index: -5;
+	}
+    50% {
+		transform: translateX(11vw) translateY(4vw) rotate(55deg);
+		z-index: -5;
+	}
+    100% {
+		transform: translateX(11vw) translateY(3.5vw) rotate(65deg);
+		z-index: -5;
+	}
+}
+
+@keyframes beerboxDrifting {
+	0% {
+		transform: translateX(-13vw) translateY(3.2vw) rotate(15deg);
+		z-index: -5;
+	}
+    50% {
+		transform: translateX(-13vw) translateY(3.7vw) rotate(20deg);
+		z-index: -5;
+	}
+    100% {
+		transform: translateX(-13vw)translateY(3.2vw) rotate(15deg);
+		z-index: -5;
+	}
+}
+
+@keyframes glass_bottle_bob {
+    0% { transform: translateY(8vw) rotate(45deg); }
+    50% { transform: translateY(7vw) rotate(39deg); }
+    100% { transform: translateY(8vw) rotate(45deg); }
+}
+
+@keyframes plastic_bottle_bob_high {
+	0% { transform: translateY(6vw) rotate(45deg); }
+    50% { transform: translateY(5vw) rotate(36deg); }
+    100% { transform: translateY(6vw) rotate(45deg); }
+}
+
+@keyframes plastic_bottle_bob_high_turned {
+    0% { transform: translateY(6vw) rotate(-45deg); }
+    50% { transform: translateY(5vw) rotate(-36deg); }
+    100% { transform: translateY(6vw) rotate(-45deg); }
+}
+
+@keyframes plastic_bottle_bob_low {
+    0% { transform: translateY(7.5vw) rotate(41deg); }
+    50% { transform: translateY(6.5vw) rotate(36deg); }
+    100% { transform: translateY(7.5vw) rotate(41deg); }
+}
+
+@keyframes plastic_bottle_bob_low_turned {
+    0% { transform: translateY(6.5vw) rotate(-41deg); }
+    50% { transform: translateY(7.5vw) rotate(-36deg); }
+    100% { transform: translateY(6.5vw) rotate(-41deg); }
+}
+
+@keyframes cleanupMove {
+	0% {
+		overflow: hidden;
+		transform: translate(25vw, -7vw) rotate(2deg);
+		visibility: visible;
+		z-index: -9;
+		opacity: 0;
+	}
+	10% {
+		overflow: hidden;
+		transform: translate(10vw, -9vw) rotate(0deg);
+		visibility: visible;
+		z-index: -9;
+		opacity: 1;
+	}
+	20% {
+		transform: translate(0vw, -9vw) rotate(2deg);
+		visibility: visible;
+		z-index: -9;
+	}
+	30% {
+		transform: translate(-5vw, -9vw) rotate(0deg);
+		visibility: visible;
+		z-index: -9;
+	}
+	40% {
+		transform: translate(-10vw, -9vw) rotate(2deg);
+		visibility: visible;
+		z-index: -9;
+	}
+	50% {
+		transform: translate(-10vw, -9vw) rotate(0deg);
+		visibility: visible;
+		z-index: -9;
+	}
+	60% {
+		transform: translate(-10vw, -9vw) rotate(2deg);
+		visibility: visible;
+		z-index: -9;
+	}
+	70% {
+		transform: translate(-10vw, -9vw) rotate(0deg);
+		visibility: visible;
+		z-index: -9;
+	}
+	80% {
+		transform: translate(-10vw, -9vw) rotate(2deg);
+		visibility: visible;
+		z-index: -9;
+	}
+	90% {
+		transform: translate(-10vw, -9vw) rotate(0deg);
+		visibility: visible;
+		z-index: -9;
+		overflow: hidden;
+	}
+	100% {
+		transform: translate(-10vw, -9vw) rotate(2deg);
+		visibility: visible;
+		z-index: -9;
+		overflow: hidden;
+	}
+}
+
+@keyframes cleanupStill {
+	0% {
+		transform: translate(-10vw, -9vw) rotate(2deg);
+		visibility: visible;
+		z-index: -9;
+		overflow: hidden;
+	}
+	10% {
+		transform: translate(-10vw, -9vw) rotate(0deg);
+		visibility: visible;
+		z-index: -9;
+		overflow: hidden;
+	}
+	20% {
+		transform: translate(-10vw, -9vw) rotate(2deg);
+		visibility: visible;
+		z-index: -9;
+		overflow: hidden;
+	}
+	30% {
+		transform: translate(-10vw, -9vw) rotate(0deg);
+		visibility: visible;
+		z-index: -9;
+		overflow: hidden;
+	}
+	40% {
+		transform: translate(-10vw, -9vw) rotate(2deg);
+		visibility: visible;
+		z-index: -9;
+		overflow: hidden;
+	}
+	50% {
+		transform: translate(-10vw, -9vw) rotate(0deg);
+		visibility: visible;
+		z-index: -9;
+		overflow: hidden;
+	}
+	60% {
+		transform: translate(-10vw, -9vw) rotate(2deg);
+		visibility: visible;
+		z-index: -9;
+		overflow: hidden;
+	}
+	70% {
+		transform: translate(-10vw, -9vw) rotate(0deg);
+		visibility: visible;
+		z-index: -9;
+		overflow: hidden;
+	}
+	80% {
+		transform: translate(-10vw, -9vw) rotate(2deg);
+		visibility: visible;
+		z-index: -9;
+		overflow: hidden;
+	}
+	90% {
+		transform: translate(-10vw, -9vw) rotate(0deg);
+		visibility: visible;
+		z-index: -9;
+		overflow: hidden;
+	}
+	100% {
+		transform: translate(-10vw, -9vw) rotate(2deg);
+		visibility: visible;
+		z-index: -9;
+		overflow: hidden;
+	}
+}
+
+@keyframes bounce {
+	0% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-10px);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+// The story class (main), the scenes and the content within them.
+// Nested in the SCSS- & BEM-style for efficiency
+// and easier coding. - Jon
+.story {
+	&__scene {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		min-height: 200px;
+		// background-color: var(--bg-section-color);
+		transition: linear 2s;
+		margin: 0;
+		border: 1vw groove burlywood;
+		padding: 0;
+
+		.story-text {
+			display: block;
+			// Defaults to hidden, but the later one-time animation reveals it.
+			visibility: hidden;
+		}
+
+		.ocean-window {
+			margin: 0 auto;
+			max-width: 1800px;
+			width: 90vw;
+			z-index: -100;
+
+			.background-sky {
+				z-index: -80;
+			}
+
+			.sun {
+				@media (prefers-reduced-motion: no-preference) {
+					animation: sunshine 2s infinite linear;
+	
+					&--1 {
+						animation: intense_sunshine 2s infinite linear;
+					}
+				}
+
+				@media (prefers-reduced-motion: reduce) {
+					animation: sunshine 4s infinite linear;
+				}
+			}
+
+			.cloud {
+				margin: 0 auto;
+				display: block;
+				max-width: 300px;
+				width: 10vw;
+				transform: translate(-35vw, 4vw);
+
+				&--type_c#cloud_c3 {
+					transform: translate(55vw, 5.5vw);
+					opacity: 88%;
+				}
+
+				&--type_gray_a#cloud_gray_a3 {
+					transform: translate(57vw, 5.2vw) scaleX(-1);
+					opacity: 78%;
+				}
+	
+				@media (prefers-reduced-motion: no-preference) {
+					&--type_a#cloud_a1, &--type_a#cloud_a2, &--type_a#cloud_a3,
+					&--type_a#cloud_a4, &--type_a#cloud_a5, &--type_a#cloud_a7 {
+						animation: moving_clouds_path_1 50s infinite linear;
+						opacity: 90%;
+					}
+	
+					&--type_b#cloud_b3, &--type_b#cloud_b7 {
+						animation: moving_clouds_path_2 60s infinite linear;
+						animation-delay: 5s;
+						opacity: 100%;
+					}
+
+					&--type_gray_a#cloud_gray_a6 {
+						animation: moving_clouds_path_1 40s infinite linear;
+						opacity: 92%;
+					}
+				}
+	
+				@media (prefers-reduced-motion: reduce) {
+					&--type_a#cloud_a1, &--type_a#cloud_a2, &--type_a#cloud_a3,
+					&--type_a#cloud_a4, &--type_a#cloud_a5, &--type_a#cloud_a7 {
+						animation: moving_clouds_path_1 100s infinite linear;
+						opacity: 90%;
+					}
+
+					&--type_b#cloud_b3, &--type_b#cloud_b7 {
+						transform: translate(5vw, 0.5vw);
+						opacity: 100%;
+					}
+
+					&--type_gray_a#cloud_gray_a6 {
+						animation: moving_clouds_path_1 80s infinite linear;
+						opacity: 92%;
+					}
+				}
+			}
+
+			// Cloud vectors in the SVG-drawing doesn't scale right like everything else.
+			// Thus a band-aid solution is blocking them for small screens for now. - Jon
+			@media screen and (max-width: 500px) {
+				.cloud {
+					display: none;
+				}
+			}
+			
+			.ocean {
+				z-index: -12;
+			
+				// &--polluted {
+				// 	background: linear-gradient(blue 0%, $algaeGreen 50%, blue 100%);
+				// }
+
+				// &--less_polluted {
+				// 	background: linear-gradient(blue 0%, $lessAlgaeGreen 50%, blue 100%);
+				// }
+			}
+		}
+
+		.vector-illustration {
+			margin: 0 auto;
+			display: inline-block;
+			position: absolute;
+		}
+  
+		.fish {
+			max-width: 300px;
+			width: 10vw;
+			transform: scalex(-1);
+			z-index: -7;
+
+			&--dead {
+				max-width: 45px;
+				width: 1.5vw;
+				left: 43vw;
+				z-index: -16;
+
+				animation: glass_bottle_bob 8s linear infinite;
+			}
+		}
+
+		.splash {
+			max-width: 150px;
+			width: 5vw;
+			transform: translate(-3vw, 9vw);
+			visibility: hidden;
+			z-index: -10;
+		}
+
+		.motorboat {
+			overflow: hidden;
+			max-width: 540px;
+			width: 18vw;
+			visibility: hidden;
+			z-index: -7;
+
+			// Longer vector, so scaled a bit. - Jon
+			// &--moving {
+			// 	max-width: 549px;
+			// 	width: 18.3vw;
+			// }
+			// Now handled by changing the SVG's viewbox.
+		}
+
+		.bottle_tossed {
+			overflow: hidden;
+			max-width: 15px;
+			width: 0.5vw;
+			visibility: hidden;
+			z-index: -6;
+		}
+
+		.fishing-boat {
+			overflow: hidden;
+			max-width: 810px;
+			width: 27vw;
+			visibility: hidden;
+			z-index: -7;
+		}
+
+		.fishing-boat {
+			overflow: hidden;
+			max-width: 810px;
+			width: 27vw;
+			visibility: hidden;
+			z-index: -7;
+		}
+
+		.cleanup_boat {
+			overflow: hidden;
+			max-width: 1620px;
+			width: 54vw;
+			visibility: hidden;
+			z-index: -7;
+		}
+
+		.cleanup_boat_2 {
+			overflow: hidden;
+			max-width: 1620px;
+			width: 54vw;
+			visibility: hidden;
+			z-index: -7;
+		}
+
+		.large_net {
+			overflow: hidden;
+			max-width: 495px;
+			width: 16.5vw;
+			visibility: hidden;
+			z-index: 1;
+
+			&--drifting {
+				max-width: 540px;
+				width: 18vw;
+				animation: bobbing_net 6s linear infinite;
+				visibility: visible;
+			}
+
+			&--sideways {
+				max-width: 405px;
+				width: 13.5vw;
+				animation: drifting_turned_net 9s linear infinite;
+				visibility: visible;
+			}
+		}
+
+		.ocean_water {
+			overflow: hidden;
+			max-width: 1350px;
+			width: 45vw;
+			z-index: 8;
+			fill: blue;
+			transform: translateY(11vw);
+			animation: oceanMove 6s linear infinite;
+		}
+
+		// Small vector size scaling
+		.empty_bottle, .empty_bottle_dirty, .empty_bottle_gray {
+			max-width: 18px;
+			width: 0.6vw;
+		}
+
+		.wine_bottle, .wine_bottle_dirty {
+			max-width: 18px;
+			width: 0.6vw;
+		}
+
+		.waste_plastic {
+			max-width: 75px;
+			width: 2.5vw;
+		}
+
+		.waste_beer_box {
+			max-width: 90px;
+			width: 3vw;
+		}
+	
+		@media (prefers-reduced-motion: no-preference) {
+			#fish_1 {
+				animation: fish-jump 8s infinite linear;
+			}
+
+			.splash {
+				&--big#splash_big_left {
+					animation:
+						splash-visibility 8s infinite linear,
+						splash-offset_left 8s infinite linear;
+					animation-delay: 0s;
+				}
+
+				&--small#splash_small_left {
+					animation:
+						splash-visibility 8s infinite linear,
+						splash-offset_left 8s infinite linear;
+					animation-delay: 2.4s;
+				}
+
+				&--small#splash_small_right {
+					animation:
+						splash-visibility 8s infinite linear,
+						splash-offset_right 8s infinite linear;
+					animation-delay: 2.5s;
+				}
+
+				&--rings#splash_rings_right {
+					animation:
+						splash-visibility 8s infinite linear,
+						splash-offset_right 8s infinite linear;
+					animation-delay: 4.9s;
+				}
+			}
+		}
+		
+		@media (prefers-reduced-motion: reduce) {
+			#fish_1 {
+				animation: fish-jump 12s infinite linear;
+			}
+		}
+
+		// Delayed animations that are activated on being scrolled to. - Jon
+		.story-text.delayed-animation--active {
+			animation: text_fade-in 3s 1 ease-in;
+			visibility: visible;
+		}
+
+		.motorboat--moving.delayed-animation--active {
+			animation: boating 10s 1 linear;
+			animation-delay: 2.5s;
+		}
+
+		.motorboat--still.delayed-animation--active {
+			transform: scaleX(-1);
+			animation: boating-still 20s infinite linear;
+			animation-delay: 12.5s;
+		}
+
+		.bottle_tossed--aerial.delayed-animation--active {
+			animation: bottle-toss 3s 1 linear;
+			animation-delay: 12.5s;
+		}
+
+		.bottle_tossed--floating.delayed-animation--active {
+			animation: bottle-float 20s infinite linear;
+			animation-delay: 15.5s;
+		}
+
+		.splash--rings.delayed-animation--active {
+			transform: translate(-11.9vw, 5.3vw) scale(0.4);
+			animation: splash-visibility 14s 1 linear;
+			animation-delay: 15.5s;
+		}
+
+		.fishing-boat_net.delayed-animation--active {
+			animation: boating 15s 1 linear;
+			animation-delay: 2.5s;
+		}
+
+		.fishing-boat_no_net.delayed-animation--active {
+			animation: fishing-still 20s infinite linear;
+			animation-delay: 17.5s;
+		}
+
+		.large_net--dropped.delayed-animation--active {
+			animation: floating_net 20s 1 linear;
+			animation-delay: 17.5s;
+		}
+
+		.cleanup_boat--moving.delayed-animation--active {
+			animation: cleanupMove 20s 1 linear;
+			animation-delay: 2s;
+		}
+
+		.cleanup_boat--still.delayed-animation--active {
+			animation: cleanupStill 20s infinite linear;
+			animation-delay: 22s;
+		}
+
+		// Always active animations
+		#empty_bottle_drifting {
+			animation: bottleDrifting 6s linear infinite;
+			z-index: -5;
+		}
+
+		#waste_plastic {
+			animation: plasticDrifting 7s linear infinite;
+			z-index: -5;
+		}
+
+		#waste_beer_box {
+			animation: beerboxDrifting 4s linear infinite;
+			z-index: -5;
+		}
+
+		#bottle_1, #bottle_3 {
+			animation: plastic_bottle_bob_high 4s linear infinite;
+		}
+		#bottle_2 {
+			left: 22vw;
+			animation: plastic_bottle_bob_high_turned 6s linear infinite;
+		}
+		#bottle_3 {
+			left: 48vw;
+			animation-delay: 2.4s;
+		}
+
+		#bottle_4, #bottle_6 {
+			animation: plastic_bottle_bob_low 6s linear infinite;
+		}
+		#bottle_5 {
+			left: 33vw;
+			animation: plastic_bottle_bob_high_turned 6s linear infinite;
+		}
+		#bottle_6 {
+			left: 39vw;
+		}
+
+		#gray_bottle_1, #gray_bottle_2 {
+			animation: plastic_bottle_bob_low_turned 8s linear infinite;
+		}
+		#gray_bottle_2 {
+			left: 58vw;
+			animation-delay: 1.2s;
+		}
+		#gray_bottle_3 {
+			left: 36vw;
+			animation: plastic_bottle_bob_high_turned 12s linear infinite;
+		}
+
+		#dirty_bottle_1, #dirty_bottle_2 {
+			left: 41vw;
+			animation: plastic_bottle_bob_high 12s linear infinite;
+		}
+		#dirty_bottle_2 {
+			left: 65vw;
+			animation-delay: 4s;
+		}
+
+		#wine_bottle_1, #wine_bottle_2, #wine_bottle_dirty_1, #wine_bottle_dirty_2 {
+			animation: glass_bottle_bob 7s linear infinite;
+		}
+		#wine_bottle_dirty_2 {
+			animation-delay: 1.2s;
+		}
+		#wine_bottle_2, #wine_bottle_dirty_2 {
+			animation-delay: 0.8s;
+		}
+	}
+}
+
+#scene_6 {
+	.ocean-window {
+		color: bisque;
+	}
+}
+
+footer {
+	padding: 2vw;
+
+	.image-section {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+		justify-content: space-around;
+
+		figure {
+			margin: 0 auto;
+			max-width: 840px;
+			width: 21vw;
+
+			img {
+				margin: inherit;
+				display: block;
+				max-width: 800px;
+				width: 20vw;
+
+				&:hover {
+					animation: bounce 0.5s ease;
+				}
+			}
+		}
+	}
+
+	.credits-section {
+		text-align: center;
+		padding-top: 20px;
+
+		ul {
+			list-style-type: none;
+			text-align: center;
+			line-height: 1.8;
+			padding-bottom: 20px;
+		}
+
+		&__credits {
+			border: 2px solid gray;
+			border-radius: 10px;
+
+			ul {
+				margin: 0 auto;
+				max-width: 1800px;
+				width: 60vw;
+				text-align: left;
+			}
+		}
+	}
+}
+
+.hidden-opacity {
+	opacity: 0;
+}
+
+// .hidden-translate {
+// 	transform: translateX(-50%);
+// }
+
+.hidden-color {
+	filter: brightness(0);
+}
+
+.hidden-blur {
+	filter: blur(15px);
+}
+
+// .hidden-font {
+// 	font-size: 0px;
+// }
+
+.hidden-all {
+	opacity: 0;
+	filter: blur(15px);
+}
