@@ -986,8 +986,6 @@ ul, li {
   width: 54vw;
   visibility: hidden;
   z-index: -7;
-  animation: cleanupMove 20s 1 linear;
-  animation-delay: 2s;
 }
 .story__scene .cleanup_boat_2 {
   overflow: hidden;
@@ -995,8 +993,6 @@ ul, li {
   width: 54vw;
   visibility: hidden;
   z-index: -7;
-  animation: cleanupStill 20s infinite linear;
-  animation-delay: 18s;
 }
 .story__scene .large_net {
   overflow: hidden;

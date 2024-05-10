@@ -978,8 +978,6 @@ $lessAlgaeGreen:rgb(33, 139, 143);
 			width: 54vw;
 			visibility: hidden;
 			z-index: -7;
-			animation: cleanupMove 20s 1 linear;
-			animation-delay: 2s;
 		}
 
 		.cleanup_boat_2 {
@@ -988,8 +986,6 @@ $lessAlgaeGreen:rgb(33, 139, 143);
 			width: 54vw;
 			visibility: hidden;
 			z-index: -7;
-			animation: cleanupStill 20s infinite linear;
-			animation-delay: 18s;
 		}
 
 		.large_net {
